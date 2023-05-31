@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="libxl">
+      <UniqueIdentifier>{0940c485-4868-466c-acc0-b30f49b10686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{9e9272bf-597d-4859-83d1-84973f238759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DeviceMgr">
+      <UniqueIdentifier>{cd060278-f328-432a-8b0d-410ef1dbb7ee}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="MultiControlSys.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtMoc Include="MultiControlSys.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="MultiControlSys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectMissleDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LogMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoTestDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MakeSureDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageBoxDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestItemsDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XLManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HistoryDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoTestWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerTask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ITask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AtmoTask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExcelOperate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UDPServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ISysCheckItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceOnlineManage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\inc\T20_NetMsg.pb.cc">
+      <Filter>inc</Filter>
+    </ClCompile>
+    <ClCompile Include="InsConfigDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyMessageBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceMgr\HecDataManager.cpp">
+      <Filter>DeviceMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceMgr\CK_Manager.cpp">
+      <Filter>DeviceMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceMgr\ZHDY_Manager.cpp">
+      <Filter>DeviceMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceMgr\RYJCY_Manager.cpp">
+      <Filter>DeviceMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceMgr\DeviceBase.cpp">
+      <Filter>DeviceMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceMgr\SXZPDY_Manager.cpp">
+      <Filter>DeviceMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceMgr\SPQ_Manager.cpp">
+      <Filter>DeviceMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceMgr\DHXHMNQ_Manager.cpp">
+      <Filter>DeviceMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceMgr\KJGXSMNQ_Manager.cpp">
+      <Filter>DeviceMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceMgr\Dan_Manager.cpp">
+      <Filter>DeviceMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceMgr\Dan2_Manager.cpp">
+      <Filter>DeviceMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceMgr\LDGDB_Manager.cpp">
+      <Filter>DeviceMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="MyToolTipDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="INSTestOBJ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MultTestOBJ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputTemperatureDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FeiKongTask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPUTask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DPUTask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Task5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Task10.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Task13.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="snap7.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceMgr\PLCManager.cpp">
+      <Filter>DeviceMgr</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="SelectMissleDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="LogMgr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="AutoTestDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="LoginDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MakeSureDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MessageBoxDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TestItemsDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="XLManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="HistoryDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TCPClient.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="AutoTestWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="PowerTask.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ITask.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="AtmoTask.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ExcelOperate.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="GlobalManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UDPServer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ISysCheckItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceOnlineManage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="InsConfigDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MyMessageBox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceMgr\HecDataManager.h">
+      <Filter>DeviceMgr</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceMgr\CK_Manager.h">
+      <Filter>DeviceMgr</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceMgr\ZHDY_Manager.h">
+      <Filter>DeviceMgr</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceMgr\RYJCY_Manager.h">
+      <Filter>DeviceMgr</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceMgr\DeviceBase.h">
+      <Filter>DeviceMgr</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceMgr\SXZPDY_Manager.h">
+      <Filter>DeviceMgr</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceMgr\SPQ_Manager.h">
+      <Filter>DeviceMgr</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceMgr\DHXHMNQ_Manager.h">
+      <Filter>DeviceMgr</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceMgr\KJGXSMNQ_Manager.h">
+      <Filter>DeviceMgr</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceMgr\LDGDB_Manager.h">
+      <Filter>DeviceMgr</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceMgr\Dan2_Manager.h">
+      <Filter>DeviceMgr</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceMgr\Dan_Manager.h">
+      <Filter>DeviceMgr</Filter>
+    </QtMoc>
+    <QtMoc Include="MyToolTipDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="INSTestOBJ.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MultTestOBJ.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="InputTemperatureDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="FeiKongTask.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="CPUTask.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DPUTask.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Task5.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Task10.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Task13.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="SelectMissleDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="AutoTestDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="MultiControlSys.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="LoginDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="MakeSureDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="MessageBoxDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="TestItemsDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="HistoryDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="AutoTestWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="InsConfigDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="MyMessageBox.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="MyToolTipDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="InputTemperatureDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Packet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_AutoTestDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_LoginDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_MakeSureDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_MessageBoxDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_MultiControlSys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_SelectMissleDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_TestItemsDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libxl\enum.h">
+      <Filter>libxl</Filter>
+    </ClInclude>
+    <ClInclude Include="libxl\IBookT.h">
+      <Filter>libxl</Filter>
+    </ClInclude>
+    <ClInclude Include="libxl\IFontT.h">
+      <Filter>libxl</Filter>
+    </ClInclude>
+    <ClInclude Include="libxl\IFormatT.h">
+      <Filter>libxl</Filter>
+    </ClInclude>
+    <ClInclude Include="libxl\ISheetT.h">
+      <Filter>libxl</Filter>
+    </ClInclude>
+    <ClInclude Include="libxl\libxl.h">
+      <Filter>libxl</Filter>
+    </ClInclude>
+    <ClInclude Include="libxl\setup.h">
+      <Filter>libxl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\T20_NetMsg.pb.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\UDPCmd.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_InsConfigDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="snap7.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceMgr\PLCManager.h">
+      <Filter>DeviceMgr</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="main.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="264.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

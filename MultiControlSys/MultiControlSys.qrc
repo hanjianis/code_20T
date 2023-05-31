@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/MultiControlSys">
+        <file>res/timg.jpg</file>
+        <file>res/title.png</file>
+        <file>res/style.css</file>
+        <file>res/btn.png</file>
+        <file>res/bk.png</file>
+        <file>res/end.png</file>
+        <file>res/exit.png</file>
+        <file>res/pause.png</file>
+        <file>res/query.png</file>
+        <file>res/repaly.png</file>
+        <file>res/start.png</file>
+        <file>res/dbk.png</file>
+        <file>res/264.ico</file>
+        <file>res/missile.png</file>
+        <file>res/checkmark.jpg</file>
+        <file>res/missile.jpg</file>
+    </qresource>
+</RCC>

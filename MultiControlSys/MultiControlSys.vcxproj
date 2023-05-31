@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7D378D58-3DB7-4E09-8CA1-C1869C800422}</ProjectGuid>
+    <Keyword>QtVS_v303</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)'=='Release|x64'">10.0.17763.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+    <UseOfMfc>false</UseOfMfc>
+    <LocalDebuggerEnvironment>PATH=$(QTDIR)\bin%3b$(PATH)</LocalDebuggerEnvironment>
+    <QTDIR>D:\Qt\Qt5.14.2\5.14.2\msvc2017</QTDIR>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">
+    <IncludePath>../inc/include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>../inc/lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>../inc/include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>../inc/lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\DeviceMgr;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libprotobufd.lib;snap7/snap7.lib;$(Qt_LIBS_);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\DeviceMgr;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libprotobufd.lib;snap7/snap7.lib;$(Qt_LIBS_);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\DeviceMgr;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\DeviceMgr;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="QtSettings">
+    <QtInstall>msvc2017</QtInstall>
+    <QtModules>core;gui;network;printsupport;sql;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="QtSettings">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>charts;core;gui;network;printsupport;sql;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="QtSettings">
+    <QtInstall>msvc2017</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="QtSettings">
+    <QtInstall>msvc2017</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\inc\T20_NetMsg.pb.cc" />
+    <ClCompile Include="AtmoTask.cpp" />
+    <ClCompile Include="AutoTestDlg.cpp" />
+    <ClCompile Include="AutoTestWidget.cpp" />
+    <ClCompile Include="CPUTask.cpp" />
+    <ClCompile Include="DeviceMgr\CK_Manager.cpp" />
+    <ClCompile Include="DeviceMgr\Dan2_Manager.cpp" />
+    <ClCompile Include="DeviceMgr\Dan_Manager.cpp" />
+    <ClCompile Include="DeviceMgr\DeviceBase.cpp" />
+    <ClCompile Include="DeviceMgr\DHXHMNQ_Manager.cpp" />
+    <ClCompile Include="DeviceMgr\HecDataManager.cpp" />
+    <ClCompile Include="DeviceMgr\KJGXSMNQ_Manager.cpp" />
+    <ClCompile Include="DeviceMgr\LDGDB_Manager.cpp" />
+    <ClCompile Include="DeviceMgr\PLCManager.cpp" />
+    <ClCompile Include="DeviceMgr\RYJCY_Manager.cpp" />
+    <ClCompile Include="DeviceMgr\SPQ_Manager.cpp" />
+    <ClCompile Include="DeviceMgr\SXZPDY_Manager.cpp" />
+    <ClCompile Include="DeviceMgr\ZHDY_Manager.cpp" />
+    <ClCompile Include="DeviceOnlineManage.cpp" />
+    <ClCompile Include="DPUTask.cpp" />
+    <ClCompile Include="ExcelOperate.cpp" />
+    <ClCompile Include="FeiKongTask.cpp" />
+    <ClCompile Include="GlobalManager.cpp" />
+    <ClCompile Include="HistoryDlg.cpp" />
+    <ClCompile Include="InputTemperatureDlg.cpp" />
+    <ClCompile Include="InsConfigDlg.cpp" />
+    <ClCompile Include="INSTestOBJ.cpp" />
+    <ClCompile Include="ISysCheckItem.cpp" />
+    <ClCompile Include="ITask.cpp" />
+    <ClCompile Include="LoginDlg.cpp" />
+    <ClCompile Include="LogMgr.cpp" />
+    <ClCompile Include="MakeSureDlg.cpp" />
+    <ClCompile Include="MessageBoxDlg.cpp" />
+    <ClCompile Include="MultTestOBJ.cpp" />
+    <ClCompile Include="MyMessageBox.cpp" />
+    <ClCompile Include="MyToolTipDlg.cpp" />
+    <ClCompile Include="PowerTask.cpp" />
+    <ClCompile Include="SelectMissleDlg.cpp" />
+    <ClCompile Include="snap7.cpp" />
+    <ClCompile Include="Task10.cpp" />
+    <ClCompile Include="Task13.cpp" />
+    <ClCompile Include="Task5.cpp" />
+    <ClCompile Include="TCPClient.cpp" />
+    <ClCompile Include="TestItemsDlg.cpp" />
+    <ClCompile Include="UDPServer.cpp" />
+    <ClCompile Include="XLManager.cpp" />
+    <QtRcc Include="MultiControlSys.qrc" />
+    <QtUic Include="AutoTestDlg.ui" />
+    <QtUic Include="AutoTestWidget.ui" />
+    <QtUic Include="HistoryDlg.ui" />
+    <QtUic Include="InputTemperatureDlg.ui" />
+    <QtUic Include="InsConfigDlg.ui" />
+    <QtUic Include="LoginDlg.ui" />
+    <QtUic Include="MakeSureDlg.ui" />
+    <QtUic Include="MessageBoxDlg.ui" />
+    <QtUic Include="MultiControlSys.ui" />
+    <QtMoc Include="MultiControlSys.h" />
+    <ClCompile Include="MultiControlSys.cpp" />
+    <ClCompile Include="main.cpp" />
+    <QtUic Include="MyMessageBox.ui" />
+    <QtUic Include="MyToolTipDlg.ui" />
+    <QtUic Include="SelectMissleDlg.ui" />
+    <QtUic Include="TestItemsDlg.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="SelectMissleDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="LogMgr.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="AutoTestDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="LoginDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MakeSureDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MessageBoxDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DeviceMgr\PLCManager.h" />
+    <ClInclude Include="snap7.h" />
+    <QtMoc Include="Task13.h" />
+    <QtMoc Include="Task10.h" />
+    <QtMoc Include="Task5.h" />
+    <QtMoc Include="DeviceMgr\ZHDY_Manager.h" />
+    <QtMoc Include="DeviceMgr\RYJCY_Manager.h" />
+    <QtMoc Include="DeviceMgr\DeviceBase.h" />
+    <QtMoc Include="DeviceMgr\SXZPDY_Manager.h" />
+    <QtMoc Include="DeviceMgr\SPQ_Manager.h" />
+    <QtMoc Include="DeviceMgr\DHXHMNQ_Manager.h" />
+    <QtMoc Include="DeviceMgr\KJGXSMNQ_Manager.h" />
+    <QtMoc Include="DeviceMgr\LDGDB_Manager.h" />
+    <QtMoc Include="DeviceMgr\Dan2_Manager.h" />
+    <QtMoc Include="DeviceMgr\Dan_Manager.h" />
+    <QtMoc Include="MyToolTipDlg.h" />
+    <QtMoc Include="INSTestOBJ.h" />
+    <QtMoc Include="MultTestOBJ.h" />
+    <QtMoc Include="InputTemperatureDlg.h" />
+    <QtMoc Include="FeiKongTask.h" />
+    <QtMoc Include="CPUTask.h" />
+    <QtMoc Include="DPUTask.h" />
+    <ClInclude Include="resource.h" />
+    <QtMoc Include="ISysCheckItem.h" />
+    <QtMoc Include="DeviceOnlineManage.h" />
+    <ClInclude Include="..\inc\T20_NetMsg.pb.h" />
+    <ClInclude Include="..\inc\UDPCmd.h" />
+    <QtMoc Include="UDPServer.h" />
+    <QtMoc Include="AutoTestWidget.h" />
+    <QtMoc Include="AtmoTask.h" />
+    <ClInclude Include="Debug\uic\ui_AutoTestDlg.h" />
+    <ClInclude Include="Debug\uic\ui_InsConfigDlg.h" />
+    <ClInclude Include="Debug\uic\ui_LoginDlg.h" />
+    <ClInclude Include="Debug\uic\ui_MakeSureDlg.h" />
+    <ClInclude Include="Debug\uic\ui_MessageBoxDlg.h" />
+    <ClInclude Include="Debug\uic\ui_MultiControlSys.h" />
+    <ClInclude Include="Debug\uic\ui_SelectMissleDlg.h" />
+    <ClInclude Include="Debug\uic\ui_TestItemsDlg.h" />
+    <QtMoc Include="PowerTask.h" />
+    <QtMoc Include="ITask.h" />
+    <QtMoc Include="ExcelOperate.h" />
+    <QtMoc Include="GlobalManager.h" />
+    <QtMoc Include="TCPClient.h" />
+    <QtMoc Include="HistoryDlg.h" />
+    <QtMoc Include="InsConfigDlg.h" />
+    <QtMoc Include="DeviceMgr\HecDataManager.h" />
+    <QtMoc Include="DeviceMgr\CK_Manager.h" />
+    <ClInclude Include="libxl\enum.h" />
+    <ClInclude Include="libxl\IBookT.h" />
+    <ClInclude Include="libxl\IFontT.h" />
+    <ClInclude Include="libxl\IFormatT.h" />
+    <ClInclude Include="libxl\ISheetT.h" />
+    <ClInclude Include="libxl\libxl.h" />
+    <ClInclude Include="libxl\setup.h" />
+    <QtMoc Include="MyMessageBox.h" />
+    <ClInclude Include="Packet.h" />
+    <QtMoc Include="XLManager.h" />
+    <QtMoc Include="TestItemsDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="main.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="264.ico" />
+    <Image Include="icon1.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,95 @@
+#centralWidget{
+background-image: url(:/MultiControlSys/res/bk.png);
+}
+#AutoTestDlg{
+background-image: url(:/MultiControlSys/res/bk.png);
+}
+#SelectMissleDlg{
+background-image: url(:/MultiControlSys/res/bk.png);
+}
+#HistoryDlg
+{
+background-image: url(:/MultiControlSys/res/bk.png);
+}
+QDialog{
+	background-image: url(:/MultiControlSys/res/dbk.png);
+}
+QMessageBox{
+	background-image: url();
+}
+QAbstractButton{
+		border-image: url();
+	}
+QPushButton{
+    font-family:Microsoft Yahei;
+    font-size:20pt;
+	width:218px;
+	height:68px;
+	border-radius:8px;
+	border-image: url(:/MultiControlSys/res/btn.png);
+}
+QToolButton{
+    font-family:Microsoft Yahei;
+    font-size:16pt;
+	width:218px;
+	height:68px;
+	border-radius:8px;
+}
+QLabel{
+	font-family:Microsoft Yahei;
+    font-size:15pt;
+background-image: url();
+}
+QLineEdit,QTextEdit,QPlainTextEdit,QSpinBox,QDoubleSpinBox,QDateEdit,QTimeEdit,QDateTimeEdit{
+border:1px solid ;
+border-radius:2px;
+padding:2px;
+background:none;
+background-image: url();
+
+}
+
+QCheckBox{
+border-radius:5px;
+padding:2px;
+background:none;
+background-image: url();
+
+}
+QComboBox{
+border:1px solid ;
+border-radius:2px;
+padding:2px;
+width:180px;
+background:none;
+background-image: url();
+	background-color: #C4C4C4;
+}
+QComboBox QAbstractItemView{
+	height:30px;
+	background-color: #E3ECD4;
+}
+QSpacer,QListWidget,QTableWidget{
+	background-image: url();
+	border-image: url();
+}
+QHeaderView::section,QTableCornerButton:section{
+font-family:Microsoft Yahei;
+font-size:12pt;
+font-weight:bold;
+padding:3px;
+margin:0px;
+color:#000000;
+border:1px solid #939393;
+border-left-width:0px;
+border-right-width:1px;
+border-top-width:0px;
+border-bottom-width:1px;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #C4C4C4,stop:1 #C4C4C4);
+}
+QTableWidget{
+color: rgb(111, 111, 111);
+font-family:Microsoft Yahei;
+font-size:12pt;
+
+}

@@ -1,0 +1,12 @@
+#pragma once
+//程控管理器 命令字 CK
+enum CK_CMD
+{
+	CK_CMD_HEARD_BEAT = 0x1000,//心跳
+	CK_CMD_VERSION = 0x1001,//版本
+	CK_CMD_SELF_CHECK=0x1002,//自检
+	CK_CMD_POWER_CONTROL=0x1003,//电源控制
+	CK_CMD_POWER_STATUS=0x1004,//电源状态
+	CK_CMD_TEST_IO=0x1005,//测试IO量
+};
+

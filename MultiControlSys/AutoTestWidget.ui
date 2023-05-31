@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AutoTestWidget</class>
+ <widget class="QWidget" name="AutoTestWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>628</width>
+    <height>513</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AutoTestWidget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel{
+	font-family:Microsoft Yahei;
+    font-size:10pt;
+background-image: url();
+	color: rgb(90, 90, 90);
+}
+</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

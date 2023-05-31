@@ -1,0 +1,199 @@
+eMsg_Reserve = 0;//保留，可忽略
+	//公共
+	eMsg_AskRegDC = 1;//终端发送,注册终端
+	eMsg_RespRegDC = 2;//服务器回复
+	eMsg_AskLogin = 3;//用户登陆
+	eMsg_RespLogin = 4;//服务器回复
+	eMsg_AskLogout = 5;//用户退出
+	eMsg_RespLogout = 6;//服务器回复
+	eMsg_Message = 7;//文字消息
+
+	//训练
+	eMsg_StartTask = 20;//导调发送,任务开始
+	eMsg_StopTask = 21;//导调发送,任务结束
+	eMsg_TaskStepInfo = 22;//终端发送,任务步骤信息
+	eMsg_TaskOver = 23;//终端发送,任务结束
+	eMsg_TaskScore=24;//任务成绩
+	//综合测试系统
+	eMsg_T_OnAppStart= 101;//应用程序启动
+	eMsg_T_OnSelectMissileType= 102;//选择导弹型号
+	eMsg_T_OnInputDCCode = 103;//输入设备号(弹号)
+	eMsg_T_OnInputTemperature = 104;//输入温度	
+	eMsg_T_OnFlashlightWork=105;//闪光灯是否工作
+	eMsg_T_OnSelfCheck=106;//自检操作
+	eMsg_T_OnItemTest=107;//单项测试
+	eMsg_T_OnComprehensiveTest=108;//综合测试
+	eMsg_T_OnINS=109;//惯导测试
+	eMsg_T_OnTestStart = 110;//开始测试
+	eMsg_T_OnTestOver = 111;//测试结束
+	eMsg_T_OnCloseWndTest = 112;//用户退出测试界面
+	eMsg_T_OnCloseApp = 113;//关闭应用程序
+	eMsg_T_OnLine_Device = 114;
+	//火工品测试
+	eMsg_E_OnAppStart= 200;//应用程序启动
+	eMsg_E_GetSysTime= 201;//终端系统时间
+	eMsg_E_SysTime= 202;//终端系统时间
+	eMsg_E_OnEnterSelfTest = 203;//进入系统自检
+	eMsg_E_TestFinished=204;//自检完成 且退出自检界面
+	eMsg_E_LinkEH01OK=205;//已连接EH01
+	eMsg_E_LinkEH01NotOK=206;//未连接EH01
+	eMsg_E_OnInputDCCode = 207;//输入设备号(弹号)
+	eMsg_E_OnSelectAuto = 208;//选择自动测试
+	eMsg_E_OnSelectBridgeR = 209;//选择桥路电阻
+	eMsg_E_OnSelectResistR = 210;//选择绝缘电阻
+	eMsg_E_OnEnterWndTest = 211;//进入测试界面
+	eMsg_E_OnCloseWndTest = 212;//退出测试界面
+	eMsg_E_SaveHisTxt=213;//保存历史数据txt完成
+	eMsg_E_OnCloseApp = 214;//关闭应用程序 
+	
+	//引信测试
+	eMsg_F_OnAppStart= 300;//应用程序启动
+ 	eMsg_F_OnSelectFuzeType= 301;//选择引信型号
+	eMsg_F_OnInputDCCode = 302;//输入产品序列号
+	eMsg_F_OnClickBtnStartTest = 303;//开始测试
+	eMsg_F_OnTestOver = 304;//测试结束
+	eMsg_F_OnCloseWndTest = 305;//用户退出测试界面
+	eMsg_F_OnCloseApp = 306;//关闭应用程序
+	
+	//惯导测试ksdmon软件
+	eMsg_K_OnAppStart= 401;//应用程序启动
+	eMsg_K_OnEntermon=402;//EnterMoniter
+	eMsg_K_OnInputCmd=403;//输入指令t
+	eMsg_K_OnInputK1=404;//输入指令k
+	eMsg_K_OnInputA20000=405;//输入指令a 20000
+	eMsg_K_OnInputFP=406;//输入指令fp rkdbasm.bin
+	eMsg_K_OnInputK2=407;//输入指令k
+	eMsg_K_OnInputQ=408;//输入指令q
+	eMsg_K_OnInputUnkownOrder=459;//输入未识别指令
+	eMsg_K_OnCloseApp = 450;//关闭应用程序
+
+	//Navigation导航，Alignment对准，Course航向，Calibration标定
+	//惯导测试eksybd软件-航向标定
+	eMsg_DB_OnAppStart=501;//应用程序启动
+	eMsg_DB_OnSelectAutoTest=502;//菜单测控方式--->自动测控
+	eMsg_DB_OnCloseWndInitBindData=503;//关闭初始装订数据对话框
+	eMsg_DB_OnCloseWndKPH01K_CW=504;//KPH-01K控制字”界面，勾选 “航向效应标定”选项，
+	eMsg_DB_OnEnterCourseAlignment=505;//进入"航向标定对准:定时回送的系统运行参数"界面
+	eMsg_DB_OnCourseAlignmentData=506;//航向标定对准的定时数据
+	eMsg_DB_OnClickNavigation=507;//点击导航按钮
+	eMsg_DB_OnClickAlignment=508;//点击对准按钮
+	eMsg_DB_OnEnterCourseCalibrationNavigation=509;//进入"航向标定导航：定时回送的系统运行参数"界面
+	eMsg_DB_OnClickCancel=510;//进入"航向标定导航：定时回送的系统运行参数"界面
+	eMsg_DB_OnCloseApp=511;//关闭应用程序
+
+	//eksyx2软件，加表标定
+	eMsg_X2_OnAppStart=601;//应用程序启动
+	eMsg_X2_OnSelectAutoTest=602;//菜单测控方式--->自动测控
+	eMsg_X2_OnEnterWndInitBindData=603;//进入初始装订数据对话框
+	eMsg_X2_OnCloseWndInitBindData=604;//关闭初始装订数据对话框
+	eMsg_X2_OnCloseWndKDH01K_CW=605;// //KPH-01K装置/KDH-01K系统控制字 R2-V4.00”界面,并附带勾选数据
+	eMsg_X2_OnEnterAlignment=606;//对准:定时回送的系统运行参数
+	eMsg_X2_OnCloseAlignment=607;//对准:定时回送的系统运行参数
+	eMsg_X2_OnEnterNavigation=608;//进入”导航：定时回送的系统运行参数”界面
+	eMsg_X2_OnCloseNavigation=609;//关闭”导航：定时回送的系统运行参数”界面
+	eMsg_X2_OnCloseApp=610;//关闭应用程序
+	
+	//eksyx2软件，转壳体
+	eMsg_X2_OnEnterKPHSysSelfTest=611;//弹出“KPH-01装置/KDH-01K系统自检 R2-V4.00”对话框
+	eMsg_X2_OnCloseKPHSysSelfTest=612;//关闭“KPH-01装置/KDH-01K系统自检 R2-V4.00”对话框
+	eMsg_X2_OnTimerAlignmentData=613;//当导航进行到7分30秒时，转动转台到45度，上位机在9分钟时将陀螺航向角度和真航向角度发给导调，导调记录动作并评分
+	
+	
+	
+	//eksyep软件，
+	//读数据
+	eMsg_EP_OnAppStart=701;//应用程序启动
+	eMsg_EP_OnSelectReadEEPROM=702;//选择读EEPROM
+	eMsg_EP_OnEnterWndKDHStatus1=703;//进入E1/KDH-01-2 状态界面1
+	eMsg_EP_OnEnterWndKDHStatus2=704;//进入E1/KDH-01-2 状态界面2
+	eMsg_EP_OnEnterWndKDHStatus3=705;//进入E1/KDH-01-2 状态界面3
+	eMsg_EP_OnEnterWndParmBack=706;//进入<EEPROM中系统标定参数回送信息>界面
+	eMsg_EP_OnCloseApp=707;//关闭应用程序
+	//写数据
+	eMsg_EP_OnSelectWriteEEPROM=710;//写EEPROM
+	eMsg_EP_OnEnterOpenIniFile=711;//进入<打开 ini 系统参数文件>界面
+	eMsg_EP_OnEnterCloseIniFile=712;//选择 ini 系统参数文件;找到处理后的EEPROM文件，点击<确定按钮>
+	eMsg_EP_OnEnterCalibrateParmP1=713;//进入<EEPROM中的系统标定参数 - P1
+	eMsg_EP_OnEnterCalibrateParmP2=714;//进入<EEPROM中的系统标定参数 - P2>界面
+	eMsg_EP_OnEnterCalibrateParmP3=715;//进入<EEPROM中的系统标定参数 - P3>界面
+	eMsg_EP_OnEnterCalibrateParmP4=716;//进入<EEPROM中的系统标定参数 - P4>界面	
+	eMsg_EP_OnCloseWndKDHStatus=717;//关闭E1/KDH-01-2 状态界面，附带停留时间
+	//EKCHL数据处理
+	eMsg_EK_OnAppStart=801;//应用程序启动
+	eMsg_EK_OnEnterWndAlert=802;//
+	eMsg_EK_OnCloseWndAlert=803;//
+	//EKCHL数据处理---壳体效应标定
+	eMsg_EK_OnSelectShellCalibration=804;//点击菜单栏->标定处理[K]->壳体效应标定[A],
+	eMsg_EK_OnEnterWndCalibrationDataProcessing=805;//弹出”<航向标定>数据处理界面”
+	eMsg_EK_OnCloseWndCalibrationDataProcessing=806;//关闭”<航向标定>数据处理界面”,附带标定次数，数据处理个数等信息
+	eMsg_EK_OnEnterWndCalibrationDataResult=807;//<航向标定> 结果”界面
+	eMsg_EK_OnCloseWndCalibrationDataResult=808;//<航向标定> 结果”界面
+	
+	
+	eMsg_EK_OnEnterWndOpenDataFile1=809;//弹出”打开第1次标定数据文件”界面
+	eMsg_EK_OnCloseWndOpenDataFile1=810;//关闭”打开第1次标定数据文件”界面,并附带文件名
+	eMsg_EK_OnEnterWndSaveResult=811;//进度条到达100%后，弹出”保存结果”对话框，点击确定按钮，返回主界面，
+	eMsg_EK_OnCloseWndSaveResult=812;//关闭”保存结果”对话框
+	//EKCHL数据处理---垂直陀螺标定=VGC=Vertical Gyro Calibration
+	eMsg_EK_VGC_OnSelectVGC=813;//点击菜单栏->标定处理[K]->垂直陀螺标定[A]
+	eMsg_EK_VGC_OnEnterWndVGCDataProcessing=814;//弹出”<垂直陀螺标定>数据处理”界面,Vertical Gyro Calibration
+	eMsg_EK_VGC_OnCloseWndVGCDataProcessing=815;//关闭”<垂直陀螺标定>数据处理”界面,附带精档脉冲调宽系数，当地维度，当地经度，标定次数，数据处理个数等信息，导调收到消息后，对附带信息进行判断，记录考核并评分
+	eMsg_EK_VGC_OnEnterWndVGCResult=816;//进入”<垂直陀螺标定> 结果”界面，同时进度条开始进行步进，
+	eMsg_EK_VGC_OnCloseWndVGCResult=817;//关闭”<垂直陀螺标定> 结果”界面
+	//                         见809		//弹出”打开第1次标定数据文件”界面。
+	//                         见810		//找到垂直陀螺标定数据文件，点击<确定>按钮。
+	//EKCHL数据处理---水平陀螺标定=Horizontal gyro calibration=HGC
+	eMsg_EK_OnSelectHGC=818;//点击菜单栏->标定处理[K]->水平陀螺标定
+	eMsg_EK_OnEnterWndHGCDataProcessing=819;//弹出”<水平陀螺标定>数据处理”界面,
+	eMsg_EK_OnCloseWndHGCDataProcessing=820;//关闭”<水平陀螺标定>数据处理”界面,
+	eMsg_EK_OnEnterWndHGCResult=821;//进入”<水平陀螺标定> 结果”界面，同时进度条开始进行步进，
+	eMsg_EK_OnCloseWndHGCResult=822;//关闭”<水平陀螺标定> 结果”界面
+	//加速度计标定=AC=Accelerometer calibration
+	eMsg_EK_OnSelectAC=834;//点击菜单栏->标定处理[K]->加速度计标定[A]
+	eMsg_EK_OnEnterWndSBTDataProcessing=823;//弹出”<选择转换板类型>数据处理”界面,选择转换板类型=Select the conversion board type
+	eMsg_EK_OnCloseWndSBTDataProcessing=824;//关闭”<选择转换板类型>数据处理”界面,选择转换板类型=Select the conversion board type
+	eMsg_EK_OnSelectIFBoard=825;//点击<I/F板 [I]>按钮
+	eMsg_EK_OnEnterWndACDataProcessingIF=826;//弹出”<加速度计标定> 数据处理(I/F板)”界面
+	eMsg_EK_OnSelectAddTableG=827;//点击<加表+与g [J]>按钮
+	eMsg_EK_OnEnterWndACGCDataProcessingIF=828;//弹出”<加速度计标定+陀螺与g有关标定>数据处理(I/F板)”界面
+	eMsg_EK_OnCloseWndACGCDataProcessingIF=829;//关闭”<加速度计标定+陀螺与g有关标定>数据处理(I/F板)”界面//附带精档脉冲调宽系数，陀螺力矩系数，当地维度，当地经度，标定次数，数据处理个数等信息
+	eMsg_EK_OnEnterWndACGCResult=830;//进入”<加速度计标定+陀螺与g有关标定> 结果”界面，
+		//                         见809		//弹出”打开第1次标定数据文件”界面。
+		//                         见810		//找到加表标定数据文件，点击<确定>按钮。										
+	eMsg_EK_OnEnterWndVGCResult=831;//进入”<垂直陀螺标定>结果”界面
+	eMsg_EK_OnCloseWndVGCResult=832;//关闭”<垂直陀螺标定> 结果”界面		
+	eMsg_EK_OnCloseApp=833;//关闭应用程序
+
+
+
+	//eksy2软件   单抽---标定单元
+	eMsg_Y2_OnAppStart=901;//应用程序启动
+	eMsg_Y2_OnEnterWndFailSafeSetting=902;//进入<E1/KDH-01-2 故障保护设置>对话框
+	eMsg_Y2_OnCloseWndFailSafeSetting=903;//关闭<E1/KDH-01-2 故障保护设置>对话框
+	eMsg_Y2_OnSelectSingleTest=904;//菜单测控方式--->单步测试
+	eMsg_Y2_OnEnterWndSingleTest=905;//进入<单步测试>对话框对话框
+	eMsg_Y2_OnCloseWndSingleTest=906;//关闭<单步测试>对话框对话框
+	eMsg_Y2_OnClickBtnNavigation=907;//点击<导航 [Y]>按钮。
+	eMsg_Y2_OnClickBtnAlignment=908;//点击<对准 [D]按钮。
+	eMsg_Y2_OnEnterWndNavigation=909;//进入”导航:定时回送的系统运行参数”界面。
+	eMsg_Y2_OnCloseWndNavigation=910;//关闭”导航:定时回送的系统运行参数”界面。并且附带状态字
+	eMsg_Y2_OnEnterWndKDHStatus=911;//进入E1/KDH-01-2 状态界面
+	eMsg_Y2_OnCloseWndKDHStatus=912;//关闭E1/KDH-01-2 状态界面
+	eMsg_Y2_OnCloseApp=913;//关闭应用程序
+	
+	//ekzdj2软件  单抽---模拟单元
+	eMsg_J2_OnAppStart=1001;//应用程序启动
+	eMsg_J2_OnSelectSingleTest=1002;//选择菜单测试方式--->自动测试[A],
+	eMsg_J2_OnEnterWndKDHSysSelfTest=1003;//弹出<KPH-01装置/KDH-01K系统自检 R2-V4.00>对话框。
+	eMsg_J2_OnCloseWndKDHSysSelfTest=1004;//关闭<KPH-01装置/KDH-01K系统自检 R2-V4.00>对话框。
+	eMsg_J2_OnEnterWndInitBindData=1005;//进入初始装订数据对话框
+	eMsg_J2_OnCloseWndInitBindData=1006;//关闭初始装订数据对话框,附带校正北斗时间，北斗时间,卫星定位模式,地理纬度，地理经度，海拔高度，游移角，航向角
+	eMsg_J2_OnEnterWndBackMsg=1007;//进入”对准初始装订回送信息”
+	eMsg_J2_OnCloseWndBackMsg=1008;//关闭”对准初始装订回送信息”
+	eMsg_J2_OnEnterWndSysCW=1009;//进入“KPH-01K装置/KDH-01K系统控制字 R2-V4.00”
+	eMsg_J2_OnCloseWndSysCW=1010;//关闭“KPH-01K装置/KDH-01K系统控制字 R2-V4.00”，附带->勾选 “系统单元测试[Y]”选项
+	eMsg_J2_OnEnterWndTestAlignment=1011;//进入”系统单元测试对准:定时回送的系统运行参数”界面，
+	eMsg_J2_OnCloseWndTestAlignment=1012;//关闭”系统单元测试对准:定时回送的系统运行参数”界面，
+	eMsg_J2_OnEnterWndTestNavigation=1013;//20分钟后自动，进入<系统单元测试导航:定时回送的系统运行参数>界面，
+	eMsg_J2_OnCloseWndTestNavigation=1014;//关闭<系统单元测试导航:定时回送的系统运行参数>界面，
+	eMsg_J2_OnCloseApp=1015;//关闭应用程序
