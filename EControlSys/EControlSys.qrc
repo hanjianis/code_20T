@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/EControlSys">
+        <file>res/green.png</file>
+        <file>res/red.png</file>
+        <file>res/u17.png</file>
+        <file>res/control.png</file>
+        <file>res/kaoshi.png</file>
+        <file>res/plan.png</file>
+        <file>res/system.png</file>
+        <file>res/close.png</file>
+        <file>res/max.png</file>
+        <file>res/min.png</file>
+        <file>res/list.png</file>
+        <file>res/replay.png</file>
+        <file>res/jiancha-.png</file>
+        <file>res/main.ico</file>
+        <file>res/line.png</file>
+        <file>res/u136.png</file>
+        <file>res/u137.png</file>
+        <file>res/left.png</file>
+        <file>res/right.png</file>
+        <file>res/u648.png</file>
+    </qresource>
+</RCC>

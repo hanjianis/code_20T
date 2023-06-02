@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="uic">
+      <UniqueIdentifier>{d5122674-9796-40fb-905e-3ee9ba485f3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{4f1e1fa9-f4ea-48f4-9d3d-026961d45bca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="EControlSys.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtMoc Include="EControlSys.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="EControlSys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <QtRcc Include="res\qss.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ETCPServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LogMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VRSimulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlanThinkDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KaoShiManage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceManageWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SubjectManageWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserManageWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WeightManageWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VersionManageWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceManageWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectUserDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskDetailDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EditTaskDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\inc\T20_NetMsg.pb.cc">
+      <Filter>inc</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceOnlineItemWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EditDeviceDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EditSubject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QSwitchButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Packet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_ControlWidget.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_DeviceManageWidget.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_EControlSys.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_KaoShiManage.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_PlanThinkDlg.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_SelectUserDlg.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_ServiceManageWidget.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_SubjectManageWidget.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_SystemWidget.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_TestDlg.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_UserManageWidget.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_VersionManageWidget.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_VRSimulation.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_WeightManageWidget.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_TaskDetailDlg.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_EditTaskDlg.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\T20_NetMsg.pb.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\UDPCmd.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_DeviceOnlineItemWidget.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_DeviceOnlineWidget.h">
+      <Filter>uic</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\uic\ui_EditSubject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ETCPServer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="LogMgr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TestDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VRSimulation.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MsgManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ControlWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="PlanThinkDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="KaoShiManage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SystemWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceManageWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SubjectManageWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UserManageWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="WeightManageWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VersionManageWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ServiceManageWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SelectUserDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="GlobalManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TaskDetailDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="EditTaskDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceOnlineItemWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="EditDeviceDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="EditSubject.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QSwitchButton.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="TestDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="VRSimulation.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ControlWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="EControlSys.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="PlanThinkDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="KaoShiManage.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SystemWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DeviceManageWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SubjectManageWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="UserManageWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WeightManageWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="VersionManageWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ServiceManageWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SelectUserDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="TaskDetailDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="EditTaskDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DeviceOnlineItemWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="EditDeviceDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="EditSubject.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+</Project>

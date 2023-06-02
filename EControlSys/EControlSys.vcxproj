@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2D1C96FB-3E03-4032-ADA9-F0A53A1A5832}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">10.0.17763.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">
+    <IncludePath>../inc/include;$(IncludePath)</IncludePath>
+    <LibraryPath>../inc/lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Link>
+      <AdditionalDependencies>libprotobufd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="QtSettings">
+    <QtInstall>5.15.2_msvc2019</QtInstall>
+    <QtModules>core;sql;network;gui;widgets;printsupport</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="QtSettings">
+    <QtInstall>msvc2017</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\inc\T20_NetMsg.pb.cc" />
+    <ClCompile Include="ControlWidget.cpp" />
+    <ClCompile Include="DeviceManageWidget.cpp" />
+    <ClCompile Include="DeviceOnlineItemWidget.cpp" />
+    <ClCompile Include="EditDeviceDlg.cpp" />
+    <ClCompile Include="EditSubject.cpp" />
+    <ClCompile Include="EditTaskDlg.cpp" />
+    <ClCompile Include="ETCPServer.cpp" />
+    <ClCompile Include="GlobalManager.cpp" />
+    <ClCompile Include="KaoShiManage.cpp" />
+    <ClCompile Include="MsgManager.cpp" />
+    <ClCompile Include="PlanThinkDlg.cpp" />
+    <ClCompile Include="QSwitchButton.cpp" />
+    <ClCompile Include="SelectUserDlg.cpp" />
+    <ClCompile Include="ServiceManageWidget.cpp" />
+    <ClCompile Include="SubjectManageWidget.cpp" />
+    <ClCompile Include="SystemWidget.cpp" />
+    <ClCompile Include="TaskDetailDlg.cpp" />
+    <ClCompile Include="TestDlg.cpp" />
+    <ClCompile Include="UserManageWidget.cpp" />
+    <ClCompile Include="VersionManageWidget.cpp" />
+    <ClCompile Include="VRSimulation.cpp" />
+    <ClCompile Include="WeightManageWidget.cpp" />
+    <QtRcc Include="EControlSys.qrc" />
+    <QtRcc Include="res\qss.qrc" />
+    <QtUic Include="ControlWidget.ui" />
+    <QtUic Include="DeviceManageWidget.ui" />
+    <QtUic Include="DeviceOnlineItemWidget.ui" />
+    <QtUic Include="EControlSys.ui" />
+    <QtMoc Include="EControlSys.h" />
+    <ClCompile Include="EControlSys.cpp" />
+    <ClCompile Include="LogMgr.cpp" />
+    <ClCompile Include="main.cpp" />
+    <QtUic Include="EditDeviceDlg.ui" />
+    <QtUic Include="EditSubject.ui" />
+    <QtUic Include="EditTaskDlg.ui" />
+    <QtUic Include="KaoShiManage.ui" />
+    <QtUic Include="PlanThinkDlg.ui" />
+    <QtUic Include="SelectUserDlg.ui" />
+    <QtUic Include="ServiceManageWidget.ui" />
+    <QtUic Include="SubjectManageWidget.ui" />
+    <QtUic Include="SystemWidget.ui" />
+    <QtUic Include="TaskDetailDlg.ui" />
+    <QtUic Include="TestDlg.ui" />
+    <QtUic Include="UserManageWidget.ui" />
+    <QtUic Include="VersionManageWidget.ui" />
+    <QtUic Include="VRSimulation.ui" />
+    <QtUic Include="WeightManageWidget.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="QSwitchButton.h" />
+    <QtMoc Include="TaskDetailDlg.h" />
+    <QtMoc Include="VersionManageWidget.h" />
+    <QtMoc Include="WeightManageWidget.h" />
+    <QtMoc Include="UserManageWidget.h" />
+    <QtMoc Include="ControlWidget.h" />
+    <QtMoc Include="PlanThinkDlg.h" />
+    <QtMoc Include="KaoShiManage.h" />
+    <QtMoc Include="SystemWidget.h" />
+    <QtMoc Include="DeviceManageWidget.h" />
+    <QtMoc Include="SubjectManageWidget.h" />
+    <QtMoc Include="ServiceManageWidget.h" />
+    <QtMoc Include="SelectUserDlg.h" />
+    <ClInclude Include="..\inc\T20_NetMsg.pb.h" />
+    <ClInclude Include="..\inc\UDPCmd.h" />
+    <ClInclude Include="Debug\uic\ui_ControlWidget.h" />
+    <ClInclude Include="Debug\uic\ui_DeviceManageWidget.h" />
+    <ClInclude Include="Debug\uic\ui_DeviceOnlineItemWidget.h" />
+    <ClInclude Include="Debug\uic\ui_DeviceOnlineWidget.h" />
+    <ClInclude Include="Debug\uic\ui_EControlSys.h" />
+    <ClInclude Include="Debug\uic\ui_EditSubject.h" />
+    <ClInclude Include="Debug\uic\ui_EditTaskDlg.h" />
+    <ClInclude Include="Debug\uic\ui_KaoShiManage.h" />
+    <ClInclude Include="Debug\uic\ui_PlanThinkDlg.h" />
+    <ClInclude Include="Debug\uic\ui_SelectUserDlg.h" />
+    <ClInclude Include="Debug\uic\ui_ServiceManageWidget.h" />
+    <ClInclude Include="Debug\uic\ui_SubjectManageWidget.h" />
+    <ClInclude Include="Debug\uic\ui_SystemWidget.h" />
+    <ClInclude Include="Debug\uic\ui_TaskDetailDlg.h" />
+    <ClInclude Include="Debug\uic\ui_TestDlg.h" />
+    <ClInclude Include="Debug\uic\ui_UserManageWidget.h" />
+    <ClInclude Include="Debug\uic\ui_VersionManageWidget.h" />
+    <ClInclude Include="Debug\uic\ui_VRSimulation.h" />
+    <ClInclude Include="Debug\uic\ui_WeightManageWidget.h" />
+    <QtMoc Include="GlobalManager.h" />
+    <QtMoc Include="EditTaskDlg.h" />
+    <QtMoc Include="MsgManager.h" />
+    <QtMoc Include="VRSimulation.h" />
+    <QtMoc Include="TestDlg.h" />
+    <QtMoc Include="LogMgr.h" />
+    <QtMoc Include="DeviceOnlineItemWidget.h" />
+    <QtMoc Include="EditDeviceDlg.h" />
+    <QtMoc Include="EditSubject.h" />
+    <ClInclude Include="Packet.h" />
+    <QtMoc Include="ETCPServer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

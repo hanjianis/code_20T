@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SystemWidget</class>
+ <widget class="QWidget" name="SystemWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>471</width>
+    <height>438</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SystemWidget</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="0">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QListWidget" name="listWidget">
+        <item>
+         <property name="text">
+          <string>设备管理</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>科目管理</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>学员管理</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>考试权重管理</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>版本管理</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>系统服务</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
