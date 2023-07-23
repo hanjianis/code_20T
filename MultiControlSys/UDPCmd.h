@@ -10,3 +10,11 @@ enum CK_CMD
 	CK_CMD_TEST_IO=0x1005,//测试IO量
 };
 
+//用于12A的程控
+enum CK12A_CMD
+{
+    CK12A_CMD_HEARD_BEAT = 0x3100,//心跳
+    CK12A_CMD_VERSION = 0x3101,//版本
+    CK12A_CMD_SELF_CHECK=0x3102,//自检
+    CK12A_CMD_POWER_CONTROL=0x3103,//电源控制
+};

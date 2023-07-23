@@ -13,7 +13,9 @@ public:
 
 public:
 	UDPServer* pUDPServer = nullptr;
-	QString _ip = "127.0.0.1";// "192.168.2.53";
+    QString _ip = "127.0.0.1";// "192.168.2.53";
+   // QString _ip = "192.168.2.53";// "192.168.2.53";
+
 	int _port = 8090;//8089
 
 	QString _version = "";//°æ±¾

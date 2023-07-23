@@ -68,6 +68,34 @@ bool PLCManager::DisConnectPLC()
 	return true;
 }
 
+//12AÐ´Î»ÖÃ
+void PLCManager::SetDQ12AStart()
+{
+
+	//DB58.DBX0.3
+	if (ptrPLC->Connected())
+	{
+		const int Len = 1;
+		byte buff[Len] = { 0 };
+		buff[0] = 0x1 << 3;
+		ptrPLC->DBWrite(58, 0, Len, buff);
+
+	}
+}
+//20TÐ´Î»ÖÃ
+void PLCManager::SetDQ20TStart( )
+{
+
+    //DB58.DBX0.2
+    if (ptrPLC->Connected())
+    {
+        const int Len = 1;
+        byte buff[Len] = { 0 };
+        buff[0] = 0x1 << 2;
+        ptrPLC->DBWrite(58, 0, Len, buff);
+
+    }
+}
 void PLCManager::SetSingleStart( )
 {
 	
@@ -250,4 +278,32 @@ bool PLCManager::ReadMulIsEnd()
 		return GetBit(buff[0], 3);
 	}
 	return false;
+}
+
+bool PLCManager::ReadDQ12A()
+{
+    //DB58.DBX0.0
+    if (ptrPLC->Connected())
+    {
+        const int Len = 1;
+        byte buff[Len] = { 0 };
+
+        ptrPLC->DBRead(58, 0, Len, buff);
+        return GetBit(buff[0], 0);
+    }
+    return false;
+}
+
+bool PLCManager::ReadDQ20T()
+{
+    //DB58.DBX0.1
+    if (ptrPLC->Connected())
+    {
+        const int Len = 1;
+        byte buff[Len] = { 0 };
+
+        ptrPLC->DBRead(58, 0, Len, buff);
+        return GetBit(buff[0], 1);
+    }
+    return false;
 }

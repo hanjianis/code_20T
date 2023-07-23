@@ -43,8 +43,6 @@ int SPQ_Manager::ParseMsgPowerControl(PMsgData pPacket)
 
 bool SPQ_Manager::CheckLineConnected()
 {
-    //决定是否设备连接
-    return true;
 	bool bConnected = true;
 	//目前第4位不检测
 	for (int i = 2; i <=10;i++)

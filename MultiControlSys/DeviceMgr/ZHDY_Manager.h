@@ -2,6 +2,7 @@
 
 #include <QObject>
 #include "DeviceBase.h"
+//×ÛºÏµçÔ´
 struct ZHDY_Data
 {
 	int nNum;//±àºÅ

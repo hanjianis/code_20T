@@ -126,7 +126,7 @@ int main(int argc, char *argv[])
 	qDebug() << "==="<<buf[0];
 	TCPClient::GetInstance();
 	UDPServer::getInstance();
-	DeviceOnlineManage::getInstance();
+    DeviceOnlineManage::getInstance();
 	//DHXHMNQ_Manager::getInstance()->RequestVersion();
 //	LDGDB_Manager::getInstance()->RequestPowerControl(1500, 50);
 	//LDGDB_Manager::getInstance()->RequestPowerControl(1000,80);
@@ -167,7 +167,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-//		TCPClient::GetInstance()->SendMsgID(eMsg_T_OnCloseApp);
+        TCPClient::GetInstance()->SendMsgID(eMsg_T_OnCloseApp);
 		GlobalManager::getInstance()->SaveIni();
 		exit(0);
 		return 1;

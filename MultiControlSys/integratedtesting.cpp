@@ -7,6 +7,10 @@
 #include "KJGXSMNQ_Manager.h"
 #include "CK_Manager.h"
 #include "DeviceOnlineManage.h"
+#include "DeviceMgr/Dan_PLCManager12A.h"
+#include "DeviceMgr/PLCManager.h"
+#include "DeviceMgr/WB_PLCManager12A.h"
+
 
 IntegratedTesting::IntegratedTesting(int datatype,QObject *parent)
     : QObject{parent}
@@ -134,6 +138,7 @@ void IntegratedTesting::timerEvent(QTimerEvent *event)
         if(automatictestingclass==0)
         {
             AutoTestData& atd = pXL->m_lstIntegratedtesting[_datatype][_lstindex];
+            RandomAtd(atd);
             emit AddTaskItemResult(atd);
 
             //if(atd.id==5)
@@ -151,6 +156,88 @@ void IntegratedTesting::timerEvent(QTimerEvent *event)
                 Sleep(2000);
                 emit sig_endTaskItem();
             }
+            //弹
+            /*
+            if(atd.id==42)
+            {
+                if (Dan_PLCManager12A::getInstance()->ConnectPLC() == true)
+                {
+                   Dan_PLCManager12A::getInstance()->SetDanStart();
+//                   Sleep(10000);
+//                   if(Dan_PLCManager12A::getInstance()->ReadPLC())                {
+
+//                   }else{
+//                       MessageBoxDlg dlg1(QString::fromLocal8Bit("与弹体连接失败！请检查电源"));
+//                       dlg1.exec();
+//                       StopCheck();
+//                       end_test=1;
+//                       return;
+//                   }
+                }else{
+                    MessageBoxDlg dlg2(QString::fromLocal8Bit("与弹体连接失败！请检查电源"));
+                    dlg2.exec();
+                    StopCheck();
+                    end_test=1;
+                    return;
+                }
+
+            }
+            */
+            //微波
+            if(atd.id==127)
+            {
+                if (WB_PLCManager12A::getInstance()->ConnectPLC() == true)
+                {
+                    WB_PLCManager12A::getInstance()->SetWBStart( );
+//                    Sleep(10000);
+//                    if(WB_PLCManager12A::getInstance()->ReadPLC())                {
+
+//                    }else{
+//                        MessageBoxDlg dlg3(QString::fromLocal8Bit("与微波连接失败！请检查电源"));
+//                        dlg3.exec();
+//                        StopCheck();
+//                        end_test=1;
+//                        return;
+//                    }
+            }else{
+                MessageBoxDlg dlg4(QString::fromLocal8Bit("与微波连接失败！请检查电源"));
+                dlg4.exec();
+                StopCheck();
+                end_test=1;
+                return;
+                }
+            }
+            //大气
+            if(atd.id==43)
+            {
+//                if (DQ_PLCManager12A::getInstance()->ConnectPLC() == true)
+//                {
+//                    DQ_PLCManager12A::getInstance()->SetDQ12AStart();
+//                    DQ_PLCManager12A::getInstance()->SetDQ20TStart();
+//                }
+                if (PLCManager::getInstance()->ConnectPLC() == true)
+                {
+                    PLCManager::getInstance()->SetDQ12AStart();
+//                    Sleep(10000);
+//                    if(PLCManager::getInstance()->ReadDQ12A())                {
+
+//                    }else{
+//                        MessageBoxDlg dlg5(QString::fromLocal8Bit("打开大气数据测控仪失败！请检查电源"));
+//                        dlg5.exec();
+//                        StopCheck();
+//                        end_test=1;
+//                        return;
+//                    }
+                }else{
+                    MessageBoxDlg dlg6(QString::fromLocal8Bit("打开大气数据测控仪失败！请检查电源"));
+                    dlg6.exec();
+                    StopCheck();
+                    end_test=1;
+                    return;
+                }
+
+            }
+
 
             /*
             if (atd.id == 1)
@@ -294,4 +381,36 @@ void IntegratedTesting::CkOnlineTimeout()
         _tmid_result = startTimer(100);
 
     }
+}
+
+//生成随机数
+float IntegratedTesting::generateRand(float min, float max)
+{
+      static bool seedStatus;
+       if (!seedStatus)
+         {
+               qsrand(QTime(0, 0, 0).secsTo(QTime::currentTime()));
+               seedStatus = true;
+            }
+        if (min > max)
+           {
+               float temp = min;
+                min = max;
+               max = temp;
+           }
+       double diff = fabs(max - min);
+       double m1 = (double)(qrand() % 100) / 100;
+        double retval = min + m1 * diff;
+        return retval;
+
+}
+void IntegratedTesting::RandomAtd(AutoTestData & atd)
+{
+   //根据atd的类型 standardtype
+   if (atd.standardtype == 2)
+       return;
+   if (atd.standardtype == 1)//在最大最小范围内产生一个随机
+   {
+       atd.val = QString("%1").arg(generateRand(atd.min,atd.max));
+   }
 }

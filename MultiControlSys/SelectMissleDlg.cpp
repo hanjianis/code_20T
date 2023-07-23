@@ -3,6 +3,8 @@
 #include <QDesktopWidget>
 #include "GlobalManager.h"
 #include "TCPClient.h"
+
+int missiletype;
 SelectMissleDlg::SelectMissleDlg(QWidget *parent)
 	: QDialog(parent)
 {    
@@ -48,15 +50,39 @@ SelectMissleDlg::~SelectMissleDlg()
 
 void SelectMissleDlg::on_pushButton_clicked()
 {
-//	TCPClient::GetInstance()->SendMsgID(eMsg_T_OnSelectMissileType);
+    TCPClient::GetInstance()->SendMsgID(eMsg_T_OnSelectMissileType);
     if (ui.comboBox->currentIndex() == 4)//等于最后一个
 	{
-		//文本内容设置成k/akd20 视频上这么写的
-
+        /*
+        if (PLCManager::getInstance()->ConnectPLC() == true)
+        {
+            PLCManager::getInstance()->SetDQ12AStart();
+           // DQ_PLCManager12A::getInstance()->SetDQ20TStart();
+        }
+        */
+        missiletype=1;
+        //文本内容设置成12A 视频上这么写的
         GlobalManager::getInstance()->_missileType = QString("YJ-12");
         QDialog::accept();   //窗口隐藏
         close();
-	}
+
+
+    } else if (ui.comboBox->currentIndex() == 3)//等于最后一个
+    {
+        /*
+        if (PLCManager::getInstance()->ConnectPLC() == true)
+        {
+            PLCManager::getInstance()->SetDQ20TStart();
+           // DQ_PLCManager12A::getInstance()->SetDQ20TStart();
+        }
+        */
+        missiletype=2;
+        //文本内容设置成k/akd20 视频上这么写的
+        GlobalManager::getInstance()->_missileType = QString("K/AKD20");
+        QDialog::accept();   //窗口隐藏
+        close();
+
+    }
 	else
 		GlobalManager::getInstance()->_missileType = ui.comboBox->currentText();
 

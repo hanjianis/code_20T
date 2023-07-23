@@ -138,6 +138,7 @@ public:
         comboBox->addItem(QString());
         comboBox->addItem(QString());
         comboBox->addItem(QString());
+        comboBox->addItem(QString());
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(290, 161, 105, 39));
         label_3 = new QLabel(LoginDlg);
@@ -165,6 +166,7 @@ public:
         comboBox->setItemText(1, QCoreApplication::translate("LoginDlg", "\346\203\260\346\200\247\345\274\271", nullptr));
         comboBox->setItemText(2, QCoreApplication::translate("LoginDlg", "\351\201\245\346\265\213\345\274\271", nullptr));
         comboBox->setItemText(3, QCoreApplication::translate("LoginDlg", "\350\256\255\347\273\203\345\274\271", nullptr));
+        comboBox->setItemText(4, QCoreApplication::translate("LoginDlg", "\345\257\274\345\274\271", nullptr));
 
         label_3->setText(QCoreApplication::translate("LoginDlg", "\345\257\274\345\274\271\345\236\213\345\217\267/\347\212\266\346\200\201", nullptr));
     } // retranslateUi

@@ -28,7 +28,7 @@ void HecDataManager::GetHecData(int tm)
 	UDPServer* pUDPServer = UDPServer::getInstance();
 	char buf[2] = { 0 };
 	memcpy(buf, &tm, 2);
-	pUDPServer->WriteData(0x1803, buf, 2,QString("192.168.2.70"));
+    pUDPServer->WriteData(0x1803, buf, 2,QString("192.168.2.70"));
 }
 void HecDataManager::SetVal(int lableid, double val)
 {

@@ -6,7 +6,12 @@ UDPServer::UDPServer(int port,QObject *parent)
 	: QObject(parent)
 {
 	m_udpSocket = new QUdpSocket();
-	bool bb = m_udpSocket->bind(QHostAddress::Any, port);
+    bool bb = m_udpSocket->bind(QHostAddress::Any, port);
+   // const QString address_text = "192.168.2.53";
+   // const QHostAddress address = QHostAddress(address_text);
+   //  port = 8089;
+   // udpSocket->writeDatagram(QNetworkDatagram(send_data,address,port));
+    //bool bb = m_udpSocket->bind(address,port);
 	if (bb)
 	{
 		LogMgr::GetInstance()->AddLog(QString::fromLocal8Bit("绑定%1端口成功").arg(port));
@@ -16,7 +21,7 @@ UDPServer::UDPServer(int port,QObject *parent)
 	{
 		LogMgr::GetInstance()->AddLog(QString::fromLocal8Bit("绑定%1端口失败").arg(port));
 	}
-	connect(m_udpSocket, SIGNAL(readyRead()), this, SLOT(udpRead()));
+	connect(m_udpSocket, SIGNAL(readyRead()), this, SLOT(udpRead()));    
 }
 
 UDPServer::~UDPServer()
@@ -33,9 +38,9 @@ UDPServer* UDPServer::getInstance()
 
 void UDPServer::RegisterEvent(int msgid, function<int(PMsgData)> func)
 {
-	m_mapBusinessFunc[msgid] = func;
+    m_mapBusinessFunc[msgid] = func;       //隐式复制
 }
-
+//带数据
 void UDPServer::WriteData(int msgid, char* buf, int buflen,QString strIp,int port)
 {
 	char* tmpBuf = new char[UDP_HEADER_LEN + buflen];
@@ -47,7 +52,7 @@ void UDPServer::WriteData(int msgid, char* buf, int buflen,QString strIp,int por
 
 	delete[] tmpBuf;
 }
-
+//不带数据
 void UDPServer::WriteData(int msgid, QString strIp, int port)
 {
 	char* tmpBuf = new char[UDP_HEADER_LEN];
@@ -59,6 +64,7 @@ void UDPServer::WriteData(int msgid, QString strIp, int port)
 	delete[] tmpBuf;
 }
 
+//udp读取数据
 void UDPServer::udpRead()
 {
 	QByteArray bArr;
@@ -74,7 +80,7 @@ void UDPServer::udpRead()
 			m_msg.MsgId = *cmd;
 			m_msg.MsgLen = 0;
 			auto it = m_mapBusinessFunc.find(m_msg.MsgId);
-			if (it != m_mapBusinessFunc.end())
+            if (it != m_mapBusinessFunc.end())
 			{
 				m_mapBusinessFunc[m_msg.MsgId](&m_msg);
 			}
@@ -89,7 +95,7 @@ void UDPServer::udpRead()
 			auto it = m_mapBusinessFunc.find(m_msg.MsgId);
 			if (it != m_mapBusinessFunc.end())
 			{
-				m_mapBusinessFunc[m_msg.MsgId](&m_msg);
+                m_mapBusinessFunc[m_msg.MsgId](&m_msg);
 			}
 			delete[] m_msg.msgBuf;
 		}

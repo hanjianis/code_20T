@@ -2,7 +2,7 @@
 #define INTEGRAEDCONFIRMDLG_H
 
 #include <QDialog>
-
+//综合测试弹出框的确认框
 namespace Ui {
 class IntegraedconfirmDlg;
 }

@@ -18,6 +18,9 @@ AtmoTask::AtmoTask(QObject *parent)
 
 
 	connect(this, SIGNAL(DQ_failed()), parent, SLOT(DQ_Failed()));
+
+   // PLCManager::getInstance()->SetDQ20TStart( );
+
 }
 
 AtmoTask::~AtmoTask()
@@ -30,7 +33,7 @@ void AtmoTask::start()
 	MessageBoxDlg dlg(QString::fromLocal8Bit("打开E23-20T大气数据测控仪"));
 	dlg.exec();
 	emit UpdateToolTipSignal(QString::fromLocal8Bit("正在打开大气数据测控仪,请稍后..."));
-
+	/*
 	if (PLCManager::getInstance()->ConnectPLC() == false)//PLC连接失败 会卡在打开大气仪界面 目前没有好的解决方式 不知道为什么
 	{
 		MessageBoxDlg dlg3(QString::fromLocal8Bit("打开大气数据测控仪失败！请检查电源"));
@@ -38,7 +41,8 @@ void AtmoTask::start()
 		emit UpdateToolTipSignal(QString::fromLocal8Bit("打开大气数据测控仪失败...."));
 		StopCheck();
 		return;
-	}
+    }
+	PLCManager::getInstance()->SetDQ20TStart();
 	emit UpdateToolTipSignal(QString::fromLocal8Bit("打开大气数据测控仪成功...."));
 	MessageBoxDlg dlg2(QString::fromLocal8Bit("待自检完成后，完成放气"));
 	dlg2.exec();
@@ -46,6 +50,36 @@ void AtmoTask::start()
 	//index=29时 有个提示 是否进行气密性检查 16:18
 
 	ITask::start();
+	*/
+	
+    if (PLCManager::getInstance()->ConnectPLC() == true)
+    {
+        PLCManager::getInstance()->SetDQ20TStart();
+ //       Sleep(5000);
+//        if(PLCManager::getInstance()->ReadDQ20T())
+//        {
+            emit UpdateToolTipSignal(QString::fromLocal8Bit("打开大气数据测控仪成功...."));
+            MessageBoxDlg dlg2(QString::fromLocal8Bit("待自检完成后，完成放气"));
+            dlg2.exec();
+            //当index=28时，有个输入温度的dialog 16：40
+            //index=29时 有个提示 是否进行气密性检查 16:18
+
+            ITask::start();
+//        }else{
+//            MessageBoxDlg dlg3(QString::fromLocal8Bit("打开大气数据测控仪失败！请检查电源"));
+//            dlg3.exec();
+//            emit UpdateToolTipSignal(QString::fromLocal8Bit("打开大气数据测控仪失败...."));
+//            StopCheck();
+//            return;
+//        }
+    }else{
+        MessageBoxDlg dlg3(QString::fromLocal8Bit("打开大气数据测控仪失败！请检查电源"));
+        dlg3.exec();
+        emit UpdateToolTipSignal(QString::fromLocal8Bit("打开大气数据测控仪失败...."));
+        StopCheck();
+        return;
+    }
+	
 }
 
 void AtmoTask::StopCheck()
