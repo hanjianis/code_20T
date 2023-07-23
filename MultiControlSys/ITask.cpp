@@ -229,7 +229,7 @@ int ITask::is_stop()
 {
 	return _stop;
 }
-//Ëæ»úÊı
+
 float ITask::generateRand(float min, float max)
 {
 	static bool seedStatus;

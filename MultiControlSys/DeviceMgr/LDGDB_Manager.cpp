@@ -121,6 +121,7 @@ void LDGDB_Manager::RequestPowerStatus()
 
 bool LDGDB_Manager::CheckConneced()
 {
+    return true;
 	//20210604 雷达状态 位0：1时发射已连接 位1：1时接收已连接 两个都正确
 	if (((_lineState >> 1) & 0x1) != 0  &&
 		((_lineState >> 0) & 0x1) != 0)

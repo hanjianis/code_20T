@@ -1,7 +1,6 @@
 #include "MultiControlSys.h"
 #include "LogMgr.h"
 #include "AutoTestDlg.h"
-#include "AutoTestDlg12A.h"
 #include "LoginDlg.h"
 
 #include "XLManager.h"
@@ -47,7 +46,7 @@ MultiControlSys::MultiControlSys(QWidget *parent)
     setWindowFlags(Qt::FramelessWindowHint);// (Qt::CustomizeWindowHint);
     resize(WIDTH, HEIGHT);
 
-    QDesktopWidget* desktop = QApplication::desktop(); // =qApp->desktop();?????
+   // QDesktopWidget* desktop = QApplication::desktop(); // =qApp->desktop();?????
    // move((desktop->width() - this->width()) / 2, (desktop->height() - this->height()) / 2);
 	//showMaximized();
     move(0,0);
@@ -56,14 +55,7 @@ MultiControlSys::MultiControlSys(QWidget *parent)
     //border-image: url(:/MultiControlSys/res/timg.jpg);
     ui.label_2->setPixmap(QPixmap(":/MultiControlSys/res/timg.jpg"));
 
-    if(missiletype==1)
-    {
-        ui.label_6->setText("YJ_12");
-    }
-    if(missiletype==2)
-    {
-        ui.label_6->setText("K/AKD20");
-    }
+
 }
 
 void MultiControlSys::timerEvent(QTimerEvent *event)
@@ -83,15 +75,8 @@ void MultiControlSys::timerEvent(QTimerEvent *event)
 			ui.btn_history->setEnabled(true);
 			ui.btn_manage->setEnabled(false);
 			ui.btn_qiangding->setEnabled(false);
-            //导弹类型
-            if(missiletype==1)
-            {
-                ui.label_7->setText(QString::fromLocal8Bit("战斗弹"));
-            }
-            if(missiletype==2)
-            {
-                ui.label_7->setText(QString::fromLocal8Bit("导弹"));
-            }            
+			//????????????????????
+            ui.label_7->setText(QString::fromLocal8Bit("战斗弹"));
             ui.label_9->setText(GlobalManager::getInstance()->_missileName);  //弹号          
 
 
@@ -106,7 +91,7 @@ void MultiControlSys::slot_pictureChange()
 }
 void MultiControlSys::closeEvent(QCloseEvent *event)      //顶级窗体关闭的一些设置
 {
-    TCPClient::GetInstance()->SendMsgID(eMsg_T_OnCloseApp);
+//	TCPClient::GetInstance()->SendMsgID(eMsg_T_OnCloseApp);
 	GlobalManager::getInstance()->SaveIni();
 }
 
@@ -119,7 +104,7 @@ void MultiControlSys::on_timeout()
 
 void MultiControlSys::on_quit_clicked()
 {
-    TCPClient::GetInstance()->SendMsgID(eMsg_T_OnCloseApp);
+    //TCPClient::GetInstance()->SendMsgID(eMsg_T_OnCloseApp);
 	GlobalManager::getInstance()->SaveIni();
     exit(0);   //中断事件循环
 }
@@ -127,30 +112,14 @@ void MultiControlSys::on_quit_clicked()
     //自动测试
 void MultiControlSys::on_btnauto_test_clicked()
 {
-    if(missiletype==1)
-    {
-        AutoTestDlg12A* dlg = new AutoTestDlg12A(ATT_AUTO);
-        dlg->exec();
-    }
-    if(missiletype==2)
-    {
-        AutoTestDlg* dlg = new AutoTestDlg(ATT_AUTO);
-        dlg->exec();
-    }
+	AutoTestDlg* dlg = new AutoTestDlg(ATT_AUTO);
+	dlg->exec();
 }
     //系统自检
 void MultiControlSys::on_btnself_check_clicked()
 {
-    if(missiletype==1)
-    {
-        AutoTestDlg12A* dlg=new AutoTestDlg12A(ATT_SYS);
-        dlg->exec();
-    }
-    if(missiletype==2)
-    {
-        AutoTestDlg* dlg=new AutoTestDlg(ATT_SYS);
-        dlg->exec();
-    }
+	AutoTestDlg* dlg=new AutoTestDlg(ATT_SYS);
+	dlg->exec();
 }
      //数据处理
 void MultiControlSys::on_btn_history_clicked()

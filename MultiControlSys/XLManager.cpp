@@ -6,7 +6,7 @@
 #include <QLabel>
 #include "libxl/libxl.h"
 
-#pragma comment(lib,"libxl/libxl.lib")
+//#pragma comment(lib,"libxl/libxl.lib")
 using namespace  libxl;
 XLManager* XLManager::m_pInstance = nullptr;
 XLManager::XLManager(QObject *parent)
@@ -49,14 +49,13 @@ void XLManager::LoadXL()
         data.name = query.value("name").toString();
         data.standardname = query.value("standardname").toString();
         data.standardval = query.value("standardval").toFloat();
-        data.min = query.value("min").toFloat();
-        data.max = query.value("max").toFloat();
+        data.min = query.value("min").toInt();
+        data.max = query.value("max").toInt();
         data.val = query.value("val").toString();
         data.unit = query.value("unit").toString();
         data.content = query.value("content").toInt();
         data.tip = query.value("tip").toString();
         data.tm = query.value("tm").toInt();
-        data.standardtype=query.value("standardtype").toInt();
 
         m_lstSystemselftest[data.datatype].push_back(data);
     }
@@ -75,8 +74,8 @@ void XLManager::LoadXL()
         data.name = query.value("name").toString();
         data.standardname = query.value("standardname").toString();
         data.standardval = query.value("standardval").toFloat();
-        data.min = query.value("min").toFloat();
-        data.max = query.value("max").toFloat();
+        data.min = query.value("min").toInt();
+        data.max = query.value("max").toInt();
         data.val = query.value("val").toString();
         data.unit = query.value("unit").toString();
         data.content = query.value("content").toInt();
@@ -101,8 +100,8 @@ void XLManager::LoadXL()
 		data.name = query.value("name").toString();
 		data.standardname = query.value("standardname").toString();
 		data.standardval = query.value("standardval").toFloat();
-        data.min = query.value("min").toFloat();
-        data.max = query.value("max").toFloat();
+		data.min = query.value("min").toInt();
+		data.max = query.value("max").toInt();
 		data.val = query.value("val").toString();
 		data.unit = query.value("unit").toString();
 		data.content = query.value("content").toInt();
@@ -199,14 +198,13 @@ void XLManager::LoadXL()
         data.name = query.value("name").toString();
         data.standardname = query.value("standardname").toString();
         data.standardval = query.value("standardval").toFloat();
-        data.min = query.value("min").toFloat();
-        data.max = query.value("max").toFloat();
+        data.min = query.value("min").toInt();
+        data.max = query.value("max").toInt();
         data.val = query.value("val").toString();
         data.unit = query.value("unit").toString();
         data.content = query.value("content").toInt();
         data.tip = query.value("tip").toString();
         data.tm = query.value("tm").toInt();
-        data.standardtype=query.value("standardtype").toInt();
 
         m_lstIntegratedtesting[data.datatype].push_back(data);
     }
@@ -226,8 +224,8 @@ void XLManager::LoadXL()
         data.name = query.value("name").toString();
         data.standardname = query.value("standardname").toString();
         data.standardval = query.value("standardval").toFloat();
-        data.min = query.value("min").toFloat();
-        data.max = query.value("max").toFloat();
+        data.min = query.value("min").toInt();
+        data.max = query.value("max").toInt();
         data.val = query.value("val").toString();
         data.unit = query.value("unit").toString();
         data.content = query.value("content").toInt();

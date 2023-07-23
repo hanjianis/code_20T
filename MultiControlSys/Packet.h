@@ -1,7 +1,7 @@
 #ifndef PACKET_H__
 #define PACKET_H__
 #pragma once
-#include "../inc/T20_NetMsg.pb.h"
+//#include "../inc/T20_NetMsg.pb.h"
 #include "../inc/UDPCmd.h"
 #include <windows.h>
 //#include <rpcndr.h>
@@ -16,7 +16,7 @@
 using namespace libxl;
 using namespace std;
 typedef unsigned char byte;
-using namespace NetMsg;
+//using namespace NetMsg;
 #define MOVE_0 1
 #define PACKET_HEADER_DATALENGTH_SIZE     4
 #define PACKET_HEADER_VERIFYCODE_SIZE     2
@@ -37,12 +37,13 @@ using namespace NetMsg;
 #define MAX_BUFFER  20480
 
 #define M_PORT 9000  //综合测控软件端口
-typedef struct  MsgData
+typedef struct MsgData
 {
 	int MsgId;
 	int MsgLen;
 	char* msgBuf;
 }*PMsgData;
+
 enum TestType
 {
 	ATT_SYS = 1,//系统自检
@@ -126,10 +127,6 @@ enum DEV_ID
 	DEV_LDGDB=LDGDB_CMD_HEARD_BEAT,//雷达高度表
 	DEV_Dan2=Dan2_CMD_HEARD_BEAT,//弹2
 	DEV_Dan = Dan_CMD_HEARD_BEAT,//弹
-    DEV_ZJ=ZJ_CMD_HEARD_BEAT,  //自检模拟器
-    DEV_HT=HT_CMD_HEARD_BEAT,       //滑台
-    DEV_CK12A=CK12A_CMD_HEARD_BEAT,       //12A程控
-    DEV_SPQ12A=SPQ12A_CMD_HEARD_BEAT       //12A适配器
 };
 struct DeviceInfo//设备ip port
 {
@@ -141,16 +138,7 @@ struct DeviceInfo//设备ip port
 	int heartcmd;//心跳的命令字
 };
 
-//区分系统自检类和自动测试类
-// extern int systemclass;
+ extern int systemclass;
  extern int automatictestingclass;
- extern int missiletype;          //导弹类型
-
- extern int hearBeat_CK;       //识别程控心跳包
- extern int hearBeat_CK20T;       //识别另一个程控心跳包
- extern int hearBeat_SPQ;      //识别适配器心跳包
- extern int hearBeat_HT;       //识别滑台心跳包
- extern int hearBeat_ZJ;       //识别自检模拟器心跳包
- extern int end_test;          //结束循环测试
 
 #endif

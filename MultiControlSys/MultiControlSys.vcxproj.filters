@@ -185,48 +185,6 @@
     <ClCompile Include="DeviceMgr\PLCManager.cpp">
       <Filter>DeviceMgr</Filter>
     </ClCompile>
-    <ClCompile Include="ISysCheckItem12A.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="integratedtesting.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="integratedtestdialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Integraedconfirmdlg.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="IntegratedLowerDisplay.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DeviceMgr\CK_Manager12A.cpp">
-      <Filter>DeviceMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="DeviceMgr\ZJ_Manager.cpp">
-      <Filter>DeviceMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="DeviceMgr\HT_Manager.cpp">
-      <Filter>DeviceMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="AutoTestDlg12A.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DeviceMgr\SPQ_Manager12A.cpp">
-      <Filter>DeviceMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="DeviceMgr\CK_Manager20T.cpp">
-      <Filter>DeviceMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="DiagnosticPause.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DeviceMgr\Dan_PLCManager12A.cpp">
-      <Filter>DeviceMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="DeviceMgr\WB_PLCManager12A.cpp">
-      <Filter>DeviceMgr</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="SelectMissleDlg.h">
@@ -358,39 +316,6 @@
     <QtMoc Include="Task13.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="AutoTestDlg12A.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="ISysCheckItem12A.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="Integraedconfirmdlg.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="iIntegratedLowerDisplay.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="integratedtestdialog.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="integratedtesting.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="DeviceMgr\CK_Manager12A.h">
-      <Filter>DeviceMgr</Filter>
-    </QtMoc>
-    <QtMoc Include="DeviceMgr\CK_Manager20T.h">
-      <Filter>DeviceMgr</Filter>
-    </QtMoc>
-    <QtMoc Include="DiagnosticPause.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="DeviceMgr\Dan_PLCManager12A.h">
-      <Filter>DeviceMgr</Filter>
-    </QtMoc>
-    <QtMoc Include="DeviceMgr\WB_PLCManager12A.h">
-      <Filter>DeviceMgr</Filter>
-    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="SelectMissleDlg.ui">
@@ -430,21 +355,6 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="InputTemperatureDlg.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="AutoTestDlg12A.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="Integraedconfirmdlg.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="IntegratedLowerDisplay.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="integratedtestdialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="DiagnosticPause.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -512,18 +422,6 @@
     <ClInclude Include="DeviceMgr\PLCManager.h">
       <Filter>DeviceMgr</Filter>
     </ClInclude>
-    <ClInclude Include="ui_AutoTestDlg12A.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DeviceMgr\SPQ_Manager12A.h">
-      <Filter>DeviceMgr</Filter>
-    </ClInclude>
-    <ClInclude Include="DeviceMgr\ZJ_Manager.h">
-      <Filter>DeviceMgr</Filter>
-    </ClInclude>
-    <ClInclude Include="DeviceMgr\HT_Manager.h">
-      <Filter>DeviceMgr</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="main.rc">
@@ -531,7 +429,10 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\264.ico">
+    <Image Include="icon1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="264.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

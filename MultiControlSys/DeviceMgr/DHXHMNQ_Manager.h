@@ -2,7 +2,6 @@
 
 #include <QObject>
 #include "DeviceBase.h"
-//µ¼º½ĞÅºÅÄ£ÄâÆ÷
 class DHXHMNQ_Manager : public DeviceBase
 {
 	Q_OBJECT

@@ -4,8 +4,7 @@
 
 IntegratedLowerDisplay::IntegratedLowerDisplay(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::IntegratedLowerDisplay),
-    Display_End(false)
+    ui(new Ui::IntegratedLowerDisplay)
 {
     ui->setupUi(this);
 
@@ -36,7 +35,7 @@ void IntegratedLowerDisplay::on_timeout()
 
 void IntegratedLowerDisplay::updateData()
 {
-    if(i>=2&&(!Display_End))
+    if(i>=2)
     {
         ui->lineEdit->setText(QString::fromLocal8Bit("1a1a"));
         ui->lineEdit_2->setText(QString::fromLocal8Bit("501a"));
@@ -48,17 +47,17 @@ void IntegratedLowerDisplay::updateData()
          ui->lineEdit_13->setText("117.03");
 
     }
-    if(i>=25&&(!Display_End))
+    if(i>=25)
     {
         ui->lineEdit_3->setText(QString::number(i-25));
     }
 
-    if(i>=3&&(!Display_End))
+    if(i>=3)
     {
         ui->lineEdit_5->setText(QString::number(13+20*(i-3)));
     }
 
-    if(i>=14&&(!Display_End))
+    if(i>=14)
     {
         float pitch_angle=-0.20+qrand()%10*0.01;
         ui->lineEdit_7->setText(QString::number(pitch_angle,'f',2));
@@ -66,7 +65,7 @@ void IntegratedLowerDisplay::updateData()
         ui->lineEdit_8->setText(QString::number(roll_angle,'f',2));
     }
 
-    if(i>=22&&i<130&&(!Display_End))
+    if(i>=22&&i<130)
     {
         float north=(i-22)*0.12;
         ui->lineEdit_9->setText(QString::number(north,'f',2));
@@ -76,7 +75,7 @@ void IntegratedLowerDisplay::updateData()
         ui->lineEdit_11->setText(QString::number(earth,'f',2));
     }
 
-    if(i>=130&&(!Display_End))
+    if(i>=130)
     {
         ui->lineEdit_9->setText("0.00");
         ui->lineEdit_10->setText("0.00");
@@ -107,11 +106,11 @@ void IntegratedLowerDisplay::updateData()
 
         ui->lineEdit_23->setText("-0.02");
     }
-    if(i==2&&(!Display_End))
+    if(i==2)
     {
         ui->lineEdit_14->setText("24.80");
     }
-    if((i>170)&&(i%4==0)&&(!Display_End))
+    if((i>170)&&(i%4==0))
     {
         int j=0;
         j++;
@@ -119,10 +118,16 @@ void IntegratedLowerDisplay::updateData()
         ui->lineEdit_14->setText(QString::number(height,'g',2));
     }
 
-}
 
-void IntegratedLowerDisplay::slot_displaylowend()
-{
-    Display_End=true;
-    dataupdate->stop();
+
+
+
+
+
+
+
+
+
+
+
 }

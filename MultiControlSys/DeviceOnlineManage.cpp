@@ -20,10 +20,6 @@ DeviceOnlineManage::DeviceOnlineManage(QObject *parent)
 	pUDPServer->RegisterEvent(LDGDB_CMD_HEARD_BEAT, std::bind(&DeviceOnlineManage::ParseMsgHeartBeat, this, std::placeholders::_1));
 	pUDPServer->RegisterEvent(Dan2_CMD_HEARD_BEAT, std::bind(&DeviceOnlineManage::ParseMsgHeartBeat, this, std::placeholders::_1));
 	pUDPServer->RegisterEvent(Dan_CMD_HEARD_BEAT, std::bind(&DeviceOnlineManage::ParseMsgHeartBeat, this, std::placeholders::_1));
-    pUDPServer->RegisterEvent(SPQ12A_CMD_HEARD_BEAT, std::bind(&DeviceOnlineManage::ParseMsgHeartBeat, this, std::placeholders::_1));
-    pUDPServer->RegisterEvent(CK12A_CMD_HEARD_BEAT, std::bind(&DeviceOnlineManage::ParseMsgHeartBeat, this, std::placeholders::_1));
-    pUDPServer->RegisterEvent(HT_CMD_HEARD_BEAT, std::bind(&DeviceOnlineManage::ParseMsgHeartBeat, this, std::placeholders::_1));
-    pUDPServer->RegisterEvent(ZJ_CMD_HEARD_BEAT, std::bind(&DeviceOnlineManage::ParseMsgHeartBeat, this, std::placeholders::_1));
 	m_Timer = new QTimer();
 	connect(m_Timer, SIGNAL(timeout()), this, SLOT(on_timeout()));
 	m_Timer->start(3000);
@@ -52,7 +48,6 @@ int DeviceOnlineManage::ParseMsgHeartBeat(PMsgData pPacket)
 	{
 
 	}
-
 	//根据心跳命令 找到相应设备的onlineflag 在sqlite里定义的 
 	XLManager* pXL = XLManager::GetInstance();
 	DeviceInfo& dev = pXL->m_mapDevice[pPacket->MsgId];
@@ -72,16 +67,16 @@ void DeviceOnlineManage::on_timeout()
 	m_nPreDeviceOnlineFlag = m_nDeviceOnlineFlag;
 	TCPClient* pTcp = TCPClient::GetInstance();
 
-	Msg_T_Online_Device msg;
-	msg.set_onlineflag(m_nDeviceOnlineFlag);
-	MsgData pMsg;
-	pMsg.MsgId = eMsg_T_OnLine_Device;
-	pMsg.MsgLen = msg.ByteSize();
-	pMsg.msgBuf = new char[pMsg.MsgLen];
-	if (msg.SerializeToArray(pMsg.msgBuf, pMsg.MsgLen))
-	{
-		pTcp->SendMsg(&pMsg);
-	}
+//	Msg_T_Online_Device msg;
+//	msg.set_onlineflag(m_nDeviceOnlineFlag);
+//	MsgData pMsg;
+//	pMsg.MsgId = eMsg_T_OnLine_Device;
+//	pMsg.MsgLen = msg.ByteSize();
+//	pMsg.msgBuf = new char[pMsg.MsgLen];
+//	if (msg.SerializeToArray(pMsg.msgBuf, pMsg.MsgLen))
+//	{
+//		pTcp->SendMsg(&pMsg);
+//	}
 	//m_nDeviceOnlineFlag = 0;
 	//未来要考虑 不在线的时候清空某个设备
 }

@@ -75,7 +75,7 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">
-    <IncludePath>../inc/include;$(VC_IncludePath);$(WindowsSDK_IncludePath);D:\Qt\5.15.2\msvc2019\include</IncludePath>
+    <IncludePath>../inc/include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <LibraryPath>../inc/lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -87,7 +87,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\DeviceMgr;.\;D:\Qt\5.15.2\msvc2019\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\DeviceMgr;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>libprotobufd.lib;snap7/snap7.lib;$(Qt_LIBS_);%(AdditionalDependencies)</AdditionalDependencies>
@@ -113,7 +113,7 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="QtSettings">
-    <QtInstall>5.15.2_msvc2019</QtInstall>
+    <QtInstall>msvc2017</QtInstall>
     <QtModules>core;gui;network;printsupport;sql;widgets</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
@@ -141,7 +141,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -191,31 +191,22 @@
     <ClCompile Include="..\inc\T20_NetMsg.pb.cc" />
     <ClCompile Include="AtmoTask.cpp" />
     <ClCompile Include="AutoTestDlg.cpp" />
-    <ClCompile Include="AutoTestDlg12A.cpp" />
     <ClCompile Include="AutoTestWidget.cpp" />
     <ClCompile Include="CPUTask.cpp" />
     <ClCompile Include="DeviceMgr\CK_Manager.cpp" />
-    <ClCompile Include="DeviceMgr\CK_Manager12A.cpp" />
-    <ClCompile Include="DeviceMgr\CK_Manager20T.cpp" />
     <ClCompile Include="DeviceMgr\Dan2_Manager.cpp" />
     <ClCompile Include="DeviceMgr\Dan_Manager.cpp" />
-    <ClCompile Include="DeviceMgr\Dan_PLCManager12A.cpp" />
     <ClCompile Include="DeviceMgr\DeviceBase.cpp" />
     <ClCompile Include="DeviceMgr\DHXHMNQ_Manager.cpp" />
     <ClCompile Include="DeviceMgr\HecDataManager.cpp" />
-    <ClCompile Include="DeviceMgr\HT_Manager.cpp" />
     <ClCompile Include="DeviceMgr\KJGXSMNQ_Manager.cpp" />
     <ClCompile Include="DeviceMgr\LDGDB_Manager.cpp" />
     <ClCompile Include="DeviceMgr\PLCManager.cpp" />
     <ClCompile Include="DeviceMgr\RYJCY_Manager.cpp" />
     <ClCompile Include="DeviceMgr\SPQ_Manager.cpp" />
-    <ClCompile Include="DeviceMgr\SPQ_Manager12A.cpp" />
     <ClCompile Include="DeviceMgr\SXZPDY_Manager.cpp" />
-    <ClCompile Include="DeviceMgr\WB_PLCManager12A.cpp" />
     <ClCompile Include="DeviceMgr\ZHDY_Manager.cpp" />
-    <ClCompile Include="DeviceMgr\ZJ_Manager.cpp" />
     <ClCompile Include="DeviceOnlineManage.cpp" />
-    <ClCompile Include="DiagnosticPause.cpp" />
     <ClCompile Include="DPUTask.cpp" />
     <ClCompile Include="ExcelOperate.cpp" />
     <ClCompile Include="FeiKongTask.cpp" />
@@ -224,12 +215,7 @@
     <ClCompile Include="InputTemperatureDlg.cpp" />
     <ClCompile Include="InsConfigDlg.cpp" />
     <ClCompile Include="INSTestOBJ.cpp" />
-    <ClCompile Include="Integraedconfirmdlg.cpp" />
-    <ClCompile Include="IntegratedLowerDisplay.cpp" />
-    <ClCompile Include="integratedtestdialog.cpp" />
-    <ClCompile Include="integratedtesting.cpp" />
     <ClCompile Include="ISysCheckItem.cpp" />
-    <ClCompile Include="ISysCheckItem12A.cpp" />
     <ClCompile Include="ITask.cpp" />
     <ClCompile Include="LoginDlg.cpp" />
     <ClCompile Include="LogMgr.cpp" />
@@ -250,15 +236,10 @@
     <ClCompile Include="XLManager.cpp" />
     <QtRcc Include="MultiControlSys.qrc" />
     <QtUic Include="AutoTestDlg.ui" />
-    <QtUic Include="AutoTestDlg12A.ui" />
     <QtUic Include="AutoTestWidget.ui" />
-    <QtUic Include="DiagnosticPause.ui" />
     <QtUic Include="HistoryDlg.ui" />
     <QtUic Include="InputTemperatureDlg.ui" />
     <QtUic Include="InsConfigDlg.ui" />
-    <QtUic Include="Integraedconfirmdlg.ui" />
-    <QtUic Include="IntegratedLowerDisplay.ui" />
-    <QtUic Include="integratedtestdialog.ui" />
     <QtUic Include="LoginDlg.ui" />
     <QtUic Include="MakeSureDlg.ui" />
     <QtUic Include="MessageBoxDlg.ui" />
@@ -290,21 +271,6 @@
     <QtMoc Include="MessageBoxDlg.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="AutoTestDlg12A.h" />
-    <QtMoc Include="ISysCheckItem12A.h" />
-    <QtMoc Include="Integraedconfirmdlg.h" />
-    <QtMoc Include="iIntegratedLowerDisplay.h" />
-    <QtMoc Include="integratedtestdialog.h" />
-    <QtMoc Include="integratedtesting.h" />
-    <QtMoc Include="DeviceMgr\CK_Manager12A.h" />
-    <QtMoc Include="DeviceMgr\CK_Manager20T.h" />
-    <QtMoc Include="DeviceMgr\Dan_PLCManager12A.h" />
-    <ClInclude Include="DeviceMgr\HT_Manager.h" />
-    <ClInclude Include="DeviceMgr\SPQ_Manager12A.h" />
-    <QtMoc Include="DeviceMgr\WB_PLCManager12A.h" />
-    <ClInclude Include="DeviceMgr\ZJ_Manager.h" />
-    <QtMoc Include="DiagnosticPause.h" />
-    <ClInclude Include="ui_AutoTestDlg12A.h" />
     <ClInclude Include="DeviceMgr\PLCManager.h" />
     <ClInclude Include="snap7.h" />
     <QtMoc Include="Task13.h" />
@@ -368,7 +334,8 @@
     <ResourceCompile Include="main.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\264.ico" />
+    <Image Include="264.ico" />
+    <Image Include="icon1.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

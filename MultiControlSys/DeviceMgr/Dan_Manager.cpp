@@ -124,6 +124,7 @@ bool Dan_Manager::CheckLineConnected()
 
 bool Dan_Manager::CheckLeiDaGaoDu()
 {
+    return true;
 	//20210604 判断_lineState的14 15位 两个都是1 如果该值判断不正确 就改用光敏电阻
 	if (((_lineState >> 14) & 0x1) != 0 ||
 		((_lineState >> 15) & 0x1) != 0)

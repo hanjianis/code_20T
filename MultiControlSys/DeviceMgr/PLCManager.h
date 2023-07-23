@@ -8,12 +8,12 @@ public:
 	PLCManager();
 private:
 	static PLCManager* m_pInstance;
-	TS7Client* ptrPLC;
+	TS7Client *ptrPLC;
 public:
 	static PLCManager* getInstance();
 private:
-	float GetFloat(unsigned char* buf, int len = 4);
-	bool GetBit(unsigned char buf, int bit);
+    float GetFloat(unsigned char *buf,int len=4);
+    bool GetBit(unsigned char buf, int bit);
 public:
 	bool ConnectPLC();
 	bool DisConnectPLC();
@@ -30,8 +30,6 @@ public:
 	float ReadJingYa();//静压
 	float ReadZongYa();//总压
 	bool ReadMulIsEnd();//综合测试是否结束
-    void SetDQ20TStart( );   //20T大气
-    void SetDQ12AStart( );  //12A大气
-    bool ReadDQ12A();
-    bool ReadDQ20T();
+
 };
+

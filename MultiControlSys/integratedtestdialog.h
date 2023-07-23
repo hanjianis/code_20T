@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include <QDialog>
 #include "Integraedconfirmdlg.h"
-//综合测试弹出框
+
 namespace Ui {
 class IntegratedTestDialog;
 }

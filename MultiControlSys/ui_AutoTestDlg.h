@@ -19,6 +19,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QToolButton>
@@ -43,6 +44,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QLabel *label_2;
+    QProgressBar *progressBar;
     QVBoxLayout *verticalLayout_9;
     QVBoxLayout *verticalLayout_3;
     QVBoxLayout *verticalLayout_2;
@@ -197,8 +199,17 @@ public:
 
         horizontalLayout->addWidget(label_2);
 
+        progressBar = new QProgressBar(AutoTestDlg);
+        progressBar->setObjectName(QString::fromUtf8("progressBar"));
+        progressBar->setStyleSheet(QString::fromUtf8("background-image: url(:/MultiControlSys/res/rular.png);"));
+        progressBar->setValue(24);
+        progressBar->setTextVisible(false);
+
+        horizontalLayout->addWidget(progressBar);
+
         horizontalLayout->setStretch(0, 2);
         horizontalLayout->setStretch(1, 6);
+        horizontalLayout->setStretch(2, 2);
 
         verticalLayout_12->addLayout(horizontalLayout);
 

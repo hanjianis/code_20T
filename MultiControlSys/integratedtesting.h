@@ -8,8 +8,6 @@
 #include "UDPServer.h"
 #include "XLManager.h"
 #include <QTimer>
-#include <QTime>
-#include "Packet.h"
 
 class IntegratedTesting : public QObject
 {
@@ -34,10 +32,8 @@ public:
     virtual void timerEvent(QTimerEvent *event);
     bool is_stop();//是否停止标识 主界面会不断检测该标识
     virtual void StopCheck();//结束测试
-    float generateRand(float min, float max);//产生随机数
 private:
     void ZHDY_Special();//综合电源的特殊处理
-    void RandomAtd(AutoTestData & atd);//随机测试结果
 signals:
     void UpdateCheckResult(int datatype, int nId, float fVal);//更新测试结果
     void AddTaskItem(AutoTestData& data);//更新数据项

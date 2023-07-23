@@ -44,8 +44,8 @@ MultTestOBJ::~MultTestOBJ()
 void MultTestOBJ::start()
 {
 	//打开综合电源对话框
-	MessageBoxDlg dlg11(QString::fromLocal8Bit("接通综合电源"));
-	dlg11.exec();
+//	MessageBoxDlg dlg11(QString::fromLocal8Bit("接通综合电源"));
+//	dlg11.exec();
 	//20210604 确保接通综合电源后 请求弹的线路连接状态
 	Dan_Manager::getInstance()->RequestLineInfo();
 	LDGDB_Manager::getInstance()->RequestPowerStatus();
@@ -120,10 +120,10 @@ void MultTestOBJ::timerEvent(QTimerEvent *event)
 		if (_lstindex == 23)
 		{
 			//打开大气数据测控仪
-            MessageBoxDlg dlg1(QString::fromLocal8Bit("打开EZ23-20T大气数据测控仪"), m_parent);
+			MessageBoxDlg dlg1(QString::fromLocal8Bit("打开EZ23-20T大气数据测控仪"), m_parent);
 			dlg1.exec();
 			emit UpdateToolTipSignal(QString::fromLocal8Bit("正在打开大气数据测控仪,请稍后..."));
-            /*
+			
 			if (PLCManager::getInstance()->ConnectPLC() == false)//PLC连接失败 会卡在打开大气仪界面 目前没有好的解决方式 不知道为什么
 			{
 				MessageBoxDlg dlg3(QString::fromLocal8Bit("打开大气数据测控仪失败！请检查电源"));
@@ -137,35 +137,7 @@ void MultTestOBJ::timerEvent(QTimerEvent *event)
 			dlg2.exec();
 			PLCManager::getInstance()->SetMulStart();
 			m_tmPLC->start(500);//
-            return;
-            */
-            if (PLCManager::getInstance()->ConnectPLC() == true)
-            {
-                PLCManager::getInstance()->SetDQ20TStart();
-//                Sleep(10000);
-//                if(PLCManager::getInstance()->ReadDQ20T())
-//                {
-                    emit UpdateToolTipSignal(QString::fromLocal8Bit("打开大气数据测控仪成功...."));
-                    MessageBoxDlg dlg2(QString::fromLocal8Bit("待自检完成后，完成放气"), m_parent);
-                    dlg2.exec();
-//                    PLCManager::getInstance()->SetMulStart();
-//                    m_tmPLC->start(500);//
-//                    return;
-//                }else{
-//                    MessageBoxDlg dlg3(QString::fromLocal8Bit("打开大气数据测控仪失败！请检查电源"));
-//                    dlg3.exec();
-//                    emit UpdateToolTipSignal(QString::fromLocal8Bit("打开大气数据测控仪失败...."));
-//                    StopCheck();
-//                    return;
-//                }
-            }else{
-                MessageBoxDlg dlg3(QString::fromLocal8Bit("打开大气数据测控仪失败！请检查电源"));
-                dlg3.exec();
-                emit UpdateToolTipSignal(QString::fromLocal8Bit("打开大气数据测控仪失败...."));
-                StopCheck();
-                return;
-            }
-
+			return;
 		}
 		if (atd.id == 29)//当前这项是数据库中转母线供电指令 下一项是雷达高度表 让雷达高度表开机 自检
 		{

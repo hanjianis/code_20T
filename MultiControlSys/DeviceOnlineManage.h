@@ -1,3 +1,4 @@
+
 #ifndef _DEVICE_ONLINE_MANAGE_H
 #define _DEVICE_ONLINE_MANAGE_H
 

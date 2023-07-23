@@ -13,8 +13,7 @@ CK_Manager::CK_Manager(QObject *parent)
 	pUDPServer->RegisterEvent(CK_CMD_POWER_CONTROL, std::bind(&CK_Manager::ParseMsgPowerControl, this, std::placeholders::_1));
 	pUDPServer->RegisterEvent(CK_CMD_POWER_STATUS, std::bind(&CK_Manager::ParseMsgPowerStatus, this, std::placeholders::_1));
 	pUDPServer->RegisterEvent(CK_CMD_TEST_IO, std::bind(&CK_Manager::ParseMsgTestIO, this, std::placeholders::_1));
-    //就是是和设备有关？
-    for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		SYS_Data sys;
 		sys.nNum =i+1;//编号 第几路

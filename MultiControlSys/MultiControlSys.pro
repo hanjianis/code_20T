@@ -11,31 +11,21 @@ CONFIG += c++17
 SOURCES += main.cpp \
     AtmoTask.cpp\
     AutoTestDlg.cpp\
-    AutoTestDlg12A.cpp \
     AutoTestWidget.cpp\
     CPUTask.cpp\
     DeviceMgr/CK_Manager.cpp \
-    DeviceMgr/CK_Manager12A.cpp \
-    DeviceMgr/CK_Manager20T.cpp \
     DeviceMgr/DHXHMNQ_Manager.cpp \
     DeviceMgr/Dan2_Manager.cpp \
     DeviceMgr/Dan_Manager.cpp \
     DeviceMgr/DeviceBase.cpp \
-    DeviceMgr/HT_Manager.cpp \
     DeviceMgr/HecDataManager.cpp \
     DeviceMgr/KJGXSMNQ_Manager.cpp \
     DeviceMgr/LDGDB_Manager.cpp \
     DeviceMgr/PLCManager.cpp \
-    DeviceMgr/PLCManager12A.cpp \
     DeviceMgr/RYJCY_Manager.cpp \
     DeviceMgr/SPQ_Manager.cpp \
-    DeviceMgr/SPQ_Manager12A.cpp \
     DeviceMgr/SXZPDY_Manager.cpp \
     DeviceMgr/ZHDY_Manager.cpp \
-    DeviceMgr/ZJ_Manager.cpp \
-    DiagnosticPause.cpp \
-    ExcelOperate.cpp \
-    ISysCheckItem12A.cpp \
     Integraedconfirmdlg.cpp \
     IntegratedLowerDisplay.cpp \
     integratedtestdialog.cpp \
@@ -73,33 +63,24 @@ SOURCES += main.cpp \
 
 
 HEADERS += AtmoTask.h\
-    DeviceMgr/CK_Manager20T.h \
-    DeviceMgr/PLCManager12A.h\
            ../inc/UDPCmd.h \
            AutoTestDlg.h\
-           AutoTestDlg12A.h \
            AutoTestWidget.h\
            CPUTask.h\
            DeviceMgr/CK_Manager.h \
-           DeviceMgr/CK_Manager12A.h \
            DeviceMgr/DHXHMNQ_Manager.h \
            DeviceMgr/Dan2_Manager.h \
            DeviceMgr/Dan_Manager.h \
            DeviceMgr/DeviceBase.h \
-           DeviceMgr/HT_Manager.h \
            DeviceMgr/HecDataManager.h \
            DeviceMgr/KJGXSMNQ_Manager.h \
            DeviceMgr/LDGDB_Manager.h \
            DeviceMgr/PLCManager.h \
            DeviceMgr/RYJCY_Manager.h \
            DeviceMgr/SPQ_Manager.h \
-           DeviceMgr/SPQ_Manager12A.h \
            DeviceMgr/SXZPDY_Manager.h \
            DeviceMgr/ZHDY_Manager.h \
-           DeviceMgr/ZJ_Manager.h \
            DeviceOnlineManage.h \
-    DiagnosticPause.h \
-           ISysCheckItem12A.h \
            Integraedconfirmdlg.h \
            iIntegratedLowerDisplay.h \
            integratedtesting.h \
@@ -145,9 +126,7 @@ HEADERS += AtmoTask.h\
 
 
 FORMS += AutoTestDlg.ui\
-         AutoTestDlg12A.ui \
          AutoTestWidget.ui\
-         DiagnosticPause.ui \
          HistoryDlg.ui\
          InputTemperatureDlg.ui\
          InsConfigDlg.ui\
@@ -163,6 +142,7 @@ FORMS += AutoTestDlg.ui\
          SelectMissleDlg.ui \
          TestItemsDlg.ui
 INCLUDEPATH += ./DeviceMgr
+
 INCLUDEPATH += ../inc
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

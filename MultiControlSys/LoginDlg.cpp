@@ -13,15 +13,6 @@ LoginDlg::LoginDlg(QWidget *parent)
 	QDesktopWidget* desktop = QApplication::desktop(); // =qApp->desktop();р╡©ирт
 	
 	move((WIDTH - this->width()) / 2, (desktop->height() - this->height()) / 2);
-
-    if(missiletype==1)
-    {
-        ui.comboBox->setCurrentIndex(0);
-    }
-    if(missiletype==2)
-    {
-        ui.comboBox->setCurrentIndex(4);
-    }
 }
 
 LoginDlg::~LoginDlg()
@@ -40,15 +31,14 @@ void LoginDlg::timerEvent(QTimerEvent *event)
 }
 
 void LoginDlg::on_btnok_clicked()
-{    
-
-    if(ui.comboBox->currentIndex()==0||ui.comboBox->currentIndex()==4)
+{
+    if(ui.comboBox->currentIndex()==0)
     {
 
     }else{
         return;
     }
-    TCPClient::GetInstance()->SendMsgID(eMsg_T_OnInputDCCode);
+    //TCPClient::GetInstance()->SendMsgID(eMsg_T_OnInputDCCode);
 	GlobalManager::getInstance()->_user = ui.lineEdit->text();
 	GlobalManager::getInstance()->_missileName = ui.lineEdit_3->text();
 	MakeSureDlg dlg;

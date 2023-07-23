@@ -27,8 +27,7 @@ TCPClient::TCPClient(QObject *parent)
 	memset(RecvBuf, 0, MAX_BUFFER);
 	RecvLen = 0;
 	bconnect = false;
-	//socket->connectToHost(QHostAddress("127.0.0.1"), M_PORT);
-	socket->connectToHost(QHostAddress("192.168.2.155"), M_PORT);
+	socket->connectToHost(QHostAddress("192.168.2.111"), M_PORT);
 	m_Timer = new QTimer(this);
 	connect(m_Timer, SIGNAL(timeout()), this, SLOT(on_timeout()));
 	m_Timer->start(3000);
@@ -41,7 +40,7 @@ TCPClient::~TCPClient()
 void TCPClient::on_timeout()
 {
 	if(bconnect == false)
-		socket->connectToHost(QHostAddress("192.168.2.155"), M_PORT);
+		socket->connectToHost(QHostAddress("192.168.2.111"), M_PORT);
 	else
 	{
 		m_Timer->stop();
@@ -140,17 +139,17 @@ void TCPClient::HandleStateChange(QAbstractSocket::SocketState socketState)
 	{
 		//连接成功
 		bconnect = true;
-        SendMsgID(eMsg_T_OnAppStart);
+    //	SendMsgID(eMsg_T_OnAppStart);
 	}
 	if (socketState == QAbstractSocket::ClosingState)
 	{
 		//重新连接
 		bconnect = false;
-		socket->connectToHost(QHostAddress("192.168.2.155"), M_PORT);
+		socket->connectToHost(QHostAddress("192.168.2.111"), M_PORT);
 		m_Timer->start(3000);
 	}
 }
-//发送id
+
 void TCPClient::SendMsgID(int msgid)
 {
 	int npos = 0;
@@ -180,7 +179,7 @@ void TCPClient::SendMsgID(int msgid)
 	socket->flush();
 	delete[]  buf;
 }
-//发送数据
+
 void TCPClient::SendMsg(PMsgData pmsg)
 {
 	int npos = 0;
